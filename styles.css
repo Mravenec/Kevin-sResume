@@ -74,6 +74,8 @@ h1 {
 .left-column {
     width: var(--left-column-width);
     padding-right: var(--padding-left-column);
+    display: flex;
+    flex-direction: column;
 }
 
 .right-column {
@@ -85,11 +87,11 @@ h2 {
     text-transform: uppercase;
     font-size: var(--h2-font-size);
     margin: 20px 0 10px 0;
-    border-bottom: none;
+    border-bottom: 2px solid var(--primary-color);
     padding: 8px 0;
     font-weight: bold;
-    background-color: var(--header-bg);
-    color: var(--header-text);
+    background-color: var(--primary-color);
+    color: #fff;
     padding-left: 5px;
     letter-spacing: 1px;
 }
@@ -101,8 +103,8 @@ h2 {
 
 .right-column h2 {
     border-bottom: 2px solid var(--primary-color);
-    background-color: transparent;
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: #fff;
     padding-bottom: 5px;
 }
 
@@ -161,6 +163,7 @@ h2 {
 
 .skills-section {
     margin-top: 10px;
+    margin-top: auto;
 }
 
 .skills-subheader {
@@ -180,35 +183,41 @@ h2 {
 .languages {
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
     font-size: var(--base-font-size);
     margin-top: var(--margin-languages);
-    gap: 12px;
+    border-top: none;
+    padding-top: 0;
 }
 
 .language-item {
-    position: relative;
-    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
 }
 
-.language-item::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
+.language-name {
+    font-size: 12px;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.language-bar-container {
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.language-bar {
+    height: 100%;
     background-color: var(--primary-color);
-}
-
-.language-item:nth-child(1)::after {
-    width: 90%;
-}
-
-.language-item:nth-child(2)::after {
-    width: 45%;
-}
-
-.language-item:nth-child(3)::after {
-    width: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
 }
 
 /* Responsive design */
