@@ -20,8 +20,8 @@ body {
     padding: 18px 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 10.5px;
-    line-height: 1.3;
+    font-size: 12px; /* Tamaño más legible */
+    line-height: 1.4;
     position: relative;
 }
 
@@ -33,56 +33,56 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-size: 24px;
-    margin: 0 0 6px 0;
+    font-size: 28px; /* Más grande para mejor visibilidad */
+    margin: 0 0 10px 0;
     text-align: center;
-    padding: 8px 0;
+    padding: 10px 0;
     letter-spacing: 2.5px;
     font-weight: bold;
-    border-top: 2.5px solid var(--primary-color);
-    border-bottom: 2.5px solid var(--primary-color);
+    border-top: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .profile {
-    font-size: 10px;
+    font-size: 11px; /* Aumentado para legibilidad */
     text-align: justify;
-    margin-bottom: 8px;
-    padding: 8px 0;
+    margin-bottom: 10px;
+    padding: 10px 0;
     border-bottom: 1px solid #ccc;
-    line-height: 1.28;
+    line-height: 1.4;
 }
 
 .separator {
     height: 2px;
     background-color: var(--primary-color);
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
 .main-content {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px;
 }
 
 .left-column {
     width: 35%;
-    padding-right: 18px;
+    padding-right: 20px;
 }
 
 .right-column {
     width: 65%;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 h2 {
     text-transform: uppercase;
-    font-size: 10px;
-    margin: 12px 0 6px 0;
-    padding: 4px 0 4px 5px;
+    font-size: 11px; /* Más legible */
+    margin: 15px 0 8px 0;
+    padding: 5px 0 5px 5px;
     font-weight: bold;
     background-color: var(--primary-color);
     color: var(--header-text);
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
 }
 
 .left-column h2:first-of-type,
@@ -91,22 +91,22 @@ h2 {
 }
 
 .contact-item {
-    font-size: 9.5px;
-    margin-bottom: 5px;
+    font-size: 10px; /* Aumentado */
+    margin-bottom: 6px;
     display: flex;
     align-items: flex-start;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .contact-item i {
-    margin-right: 6px;
-    min-width: 13px;
+    margin-right: 8px;
+    min-width: 15px;
 }
 
 .education-item, .job-item {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     position: relative;
-    padding-left: 10px;
+    padding-left: 12px;
 }
 
 .education-item::before, .job-item::before {
@@ -116,52 +116,52 @@ h2 {
     top: 0;
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 9px;
+    font-size: 10px;
 }
 
 .education-year, .job-year {
     font-weight: bold;
-    font-size: 9px;
+    font-size: 10px;
     color: var(--secondary-color);
     text-transform: uppercase;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .education-title, .job-title {
     font-weight: bold;
-    font-size: 9.5px;
-    margin: 2px 0;
+    font-size: 10px;
+    margin: 3px 0;
 }
 
 .education-school, .job-company {
-    font-size: 9px;
-    margin: 2px 0;
+    font-size: 10px;
+    margin: 3px 0;
     font-style: italic;
 }
 
 .job-description {
-    font-size: 9px;
-    margin-top: 3px;
+    font-size: 10px;
+    margin-top: 5px;
     text-align: justify;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 .skills-section {
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 .skills-subheader {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 9px;
-    margin-bottom: 2px;
-    margin-top: 8px;
+    font-size: 10px;
+    margin-bottom: 3px;
+    margin-top: 10px;
 }
 
 .skills-list {
-    font-size: 9px;
-    margin-bottom: 5px;
-    line-height: 1.4;
+    font-size: 10px;
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 /* === LANGUAGES FULL WIDTH STYLE === */
@@ -173,9 +173,9 @@ h2 + .languages-horizontal {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  gap: 30px;
-  margin: 10px 0 6px 0;
-  padding: 8px 0 0 0;
+  gap: 35px;
+  margin: 15px 0 10px 0;
+  padding: 10px 0 0 0;
   border-top: 2px solid #000;
   max-width: 800px;
 }
@@ -185,25 +185,25 @@ h2 + .languages-horizontal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .language-bar-container {
   width: 100%;
-  height: 7px;
+  height: 8px;
   background-color: #e0e0e0;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .language-bar {
   height: 100%;
   background-color: #4a4a4a;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .language-name {
-  font-size: 9px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
   color: #000;
@@ -218,9 +218,9 @@ h2 + .languages-horizontal {
     .left-column {
         width: 100%;
         padding-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         border-bottom: 2px solid #ddd;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
     }
 
     .right-column {
@@ -233,11 +233,11 @@ h2 + .languages-horizontal {
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 9px;
+        font-size: 10px;
     }
 }
 
