@@ -20,7 +20,7 @@ body {
     padding: 18px 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 12px; /* Tamaño más legible */
+    font-size: 11.5px; /* Reducido ligeramente */
     line-height: 1.4;
     position: relative;
 }
@@ -33,7 +33,7 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-size: 28px; /* Más grande para mejor visibilidad */
+    font-size: 27px; /* Un poco más pequeño */
     margin: 0 0 10px 0;
     text-align: center;
     padding: 10px 0;
@@ -44,7 +44,7 @@ h1 {
 }
 
 .profile {
-    font-size: 11px; /* Aumentado para legibilidad */
+    font-size: 10.5px; /* Reducido */
     text-align: justify;
     margin-bottom: 10px;
     padding: 10px 0;
@@ -76,7 +76,7 @@ h1 {
 
 h2 {
     text-transform: uppercase;
-    font-size: 11px; /* Más legible */
+    font-size: 10.5px; /* Ligeramente más pequeño */
     margin: 15px 0 8px 0;
     padding: 5px 0 5px 5px;
     font-weight: bold;
@@ -91,7 +91,7 @@ h2 {
 }
 
 .contact-item {
-    font-size: 10px; /* Aumentado */
+    font-size: 9.5px; /* Reducido */
     margin-bottom: 6px;
     display: flex;
     align-items: flex-start;
@@ -116,12 +116,12 @@ h2 {
     top: 0;
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9.5px;
 }
 
 .education-year, .job-year {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9.5px;
     color: var(--secondary-color);
     text-transform: uppercase;
     margin-bottom: 3px;
@@ -129,18 +129,18 @@ h2 {
 
 .education-title, .job-title {
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9.5px;
     margin: 3px 0;
 }
 
 .education-school, .job-company {
-    font-size: 10px;
+    font-size: 9.5px;
     margin: 3px 0;
     font-style: italic;
 }
 
 .job-description {
-    font-size: 10px;
+    font-size: 9.5px;
     margin-top: 5px;
     text-align: justify;
     line-height: 1.4;
@@ -153,13 +153,13 @@ h2 {
 .skills-subheader {
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 9.5px;
     margin-bottom: 3px;
     margin-top: 10px;
 }
 
 .skills-list {
-    font-size: 10px;
+    font-size: 9.5px;
     margin-bottom: 6px;
     line-height: 1.5;
 }
@@ -203,7 +203,7 @@ h2 + .languages-horizontal {
 }
 
 .language-name {
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: bold;
   text-align: center;
   color: #000;
@@ -233,11 +233,11 @@ h2 + .languages-horizontal {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
     h2 {
-        font-size: 10px;
+        font-size: 9.5px;
     }
 }
 
