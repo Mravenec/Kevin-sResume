@@ -43,6 +43,8 @@ body {
     margin: 0 auto;
     line-height: var(--line-height);
     font-size: var(--base-font-size);
+    height: 100vh; /* Asegurar altura completa para fixed positioning */
+    position: relative;
 }
 
 h1 {
@@ -265,5 +267,73 @@ h2 + .languages-horizontal {
 
     h2 {
         font-size: 11px;
+    }
+}
+
+/* Posición del botón de descarga en esquina superior izquierda */
+#download-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para visibilidad */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#downloadBtn {
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Estilos específicos para impresión/PDF */
+@media print {
+    body {
+        max-width: none;
+        margin: 0;
+        padding: 0.3in;
+        font-size: 8px; /* Tamaño base más pequeño */
+        line-height: 1.2;
+    }
+    h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        padding: 10px 0;
+    }
+    h2 {
+        font-size: 10px;
+        margin: 8px 0 4px 0;
+    }
+    .profile {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+    .main-content {
+        font-size: 7px; /* Aún más pequeño para contenido */
+        gap: 10px;
+    }
+    .contact-item, .education-item, .job-item {
+        margin-bottom: 5px;
+    }
+    .languages-horizontal {
+        margin: 8px 0;
+    }
+    .skills-list {
+        line-height: 1.3;
+    }
+    #download-container {
+        display: none;
     }
 }

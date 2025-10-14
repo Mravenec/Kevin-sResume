@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Botón de descarga en esquina superior izquierda -->
+    <div id="download-container">
+        <button id="downloadBtn">Descargar PDF</button>
+    </div>
+
     <h1>KEVIN CAMPOS GONZÁLEZ</h1>
 
     <div class="profile">
@@ -146,5 +151,10 @@
     </div>
 
     <div class="separator"></div>
+
+    <!-- Script para html2pdf.js (dependencia externa) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Script personalizado para la descarga -->
+    <script src="script.js"></script>
 </body>
 </html>
