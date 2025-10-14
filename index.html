@@ -3,160 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Campos González Resume</title>
+    <meta name="description" content="Resume of Kevin Campos González - Software Developer with expertise in full-stack development, Java, Spring Boot, React, and more.">
+    <meta name="keywords" content="Kevin Campos, Software Engineer, Resume, Full-Stack Developer, Java, React, Costa Rica">
+    <title>Kevin Campos González - Software Developer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Botón de descarga en esquina superior izquierda -->
+    <!-- Download button in top left corner -->
     <div id="download-container">
-        <button id="downloadBtn">Descargar PDF</button>
+        <button id="downloadBtn" aria-label="Download PDF Resume">📄 Download PDF</button>
     </div>
 
-    <div class="content-wrapper">
-        <h1>KEVIN CAMPOS GONZÁLEZ</h1>
+    <main class="content-wrapper">
+        <header class="header">
+            <h1>KEVIN CAMPOS GONZÁLEZ</h1>
+            <p class="subtitle">Software Developer</p>
+        </header>
 
-        <div class="profile">
-            Dedicated software development professional with a Diploma in Software Engineering (Graduated) and some experience in full-stack development, including Java, Spring Boot, React JS, and database management. Currently pursuing a Bachelor's Degree in Software Engineering at Universidad Técnica Nacional, I am passionate about leveraging my technical expertise to solve complex problems in dynamic, innovative environments.
-        </div>
+        <section class="profile">
+            <p>Dedicated software development professional with a Diploma in Software Engineering and experience in full-stack development, including Java, Spring Boot, React JS, and database management. Currently pursuing a Bachelor's Degree in Software Engineering at Universidad Técnica Nacional, I am passionate about leveraging my technical expertise to solve complex problems in dynamic, innovative environments.</p>
+        </section>
 
         <div class="separator"></div>
 
         <div class="main-content">
-            <div class="left-column">
-                <h2>CONTACT</h2>
-                <div class="contact-item"><i>☎</i> 6150-9057</div>
-                <div class="contact-item"><i>✉</i> kcamposgo90@gmail.com</div>
-                <div class="contact-item"><i>📍</i> Santa Barbara, Heredia</div>
+            <aside class="left-column">
+                <section class="contact">
+                    <h2>Contact</h2>
+                    <div class="contact-item"><span class="icon">📞</span> 6150-9057</div>
+                    <div class="contact-item"><span class="icon">✉️</span> <a href="mailto:kcamposgo90@gmail.com">kcamposgo90@gmail.com</a></div>
+                    <div class="contact-item"><span class="icon">📍</span> Santa Barbara, Heredia</div>
+                </section>
 
-                <h2>EDUCATION</h2>
-                <div class="education-item">
-                    <div class="education-year">2025-CURRENT</div>
-                    <div class="education-title">Bachelor's Degree in Software Engineering</div>
-                    <div class="education-school">Universidad Técnica Nacional</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2017-2025</div>
-                    <div class="education-title">Diploma in Software Engineering (Graduated)</div>
-                    <div class="education-school">Universidad Técnica Nacional</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2011</div>
-                    <div class="education-title">English as a Second Language</div>
-                    <div class="education-school">Universidad Técnica Nacional</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2009</div>
-                    <div class="education-title">Middle Technician in Electrical Engineering</div>
-                    <div class="education-school">Colegio Técnico Profesional Jesús Ocaña Rojas</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-year">2009</div>
-                    <div class="education-title">High School Bachelor's Degree</div>
-                    <div class="education-school">Colegio Técnico Profesional Jesús Ocaña Rojas</div>
-                </div>
+                <section class="education">
+                    <h2>Education</h2>
+                    <article class="education-item">
+                        <div class="education-year">2025 - Current</div>
+                        <h3 class="education-title">Bachelor's Degree in Software Engineering</h3>
+                        <p class="education-school">Universidad Técnica Nacional</p>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-year">2017 - 2025</div>
+                        <h3 class="education-title">Diploma in Software Engineering (Graduated)</h3>
+                        <p class="education-school">Universidad Técnica Nacional</p>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-year">2011</div>
+                        <h3 class="education-title">English as a Second Language</h3>
+                        <p class="education-school">Universidad Técnica Nacional</p>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-year">2009</div>
+                        <h3 class="education-title">Middle Technician in Electrical Engineering</h3>
+                        <p class="education-school">Colegio Técnico Profesional Jesús Ocaña Rojas</p>
+                    </article>
+                    <article class="education-item">
+                        <div class="education-year">2009</div>
+                        <h3 class="education-title">High School Bachelor's Degree</h3>
+                        <p class="education-school">Colegio Técnico Profesional Jesús Ocaña Rojas</p>
+                    </article>
+                </section>
 
-                <h2>SKILLS</h2>
-                <div class="skills-section">
-                    <div class="skills-subheader">DATABASE</div>
-                    <div class="skills-list">MS SQL, MySQL, MariaDB, PostgreSQL</div>
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <div class="skills-section">
+                        <div class="skill-category">
+                            <h3 class="skills-subheader">Database</h3>
+                            <p class="skills-list">MS SQL, MySQL, MariaDB, PostgreSQL</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skills-subheader">Back-End</h3>
+                            <p class="skills-list">OOP, Java, JSON, MVC, SOLID, RESTful API, Maven, Spring Boot, JOOQ, Node.js, Sequelize, Express</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skills-subheader">Front-End</h3>
+                            <p class="skills-list">React JS, Angular, HTML5, CSS3, JavaScript, Bootstrap, JSF-PrimeFaces, JSP, XHTML</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skills-subheader">Advanced Tools</h3>
+                            <p class="skills-list">Microsoft Office, SharePoint</p>
+                        </div>
+                        <div class="skill-category">
+                            <h3 class="skills-subheader">Technical Skills</h3>
+                            <p class="skills-list">Customer Service, Tech Support, Virtualization</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
 
-                    <div class="skills-subheader">BACK-END</div>
-                    <div class="skills-list">OOP, Java, JSON, MVC, SOLID, RESTful API, Maven, Spring Boot, JOOQ, NodeJs, Sequelize, Express</div>
-
-                    <div class="skills-subheader">FRONT-END</div>
-                    <div class="skills-list">React JS (Basic), Angular, HTML5, CSS3, Javascript, Bootstrap, JSF-PrimeFaces, JSP, XHTML</div>
-
-                    <div class="skills-subheader">ADVANCED</div>
-                    <div class="skills-list">Microsoft Office, SharePoint</div>
-
-                    <div class="skills-subheader">TECHNICAL</div>
-                    <div class="skills-list">Customer service (chat and calls), Tech support, Virtualization</div>
-                </div>
-            </div>
-
-            <div class="right-column">
-                <h2>WORK EXPERIENCE</h2>
-                <div class="job-item">
-                    <div class="job-year">2023-CURRENT</div>
-                    <div class="job-title">Freelance Software Developer</div>
-                    <div class="job-company">Rodija S.A.</div>
-                    <div class="job-description">Software development for video-on-demand system. Programmed MVC on GitHub with React JS, Spring Boot, MariaDB, and EC2 deployment on AWS. tuprimernegocio.org</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2021-2024</div>
-                    <div class="job-title">Domain Expert</div>
-                    <div class="job-company">CONCENTRIX</div>
-                    <div class="job-description">Provided customer service and technical support for Google Domains. Assisted users in managing DNS, A, CNAME, MX, SPF, and TXT records; added custom names to servers and connected websites with domain names.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2020-2021</div>
-                    <div class="job-title">Chat Agent and Technical Support</div>
-                    <div class="job-company">SYKES</div>
-                    <div class="job-description">Provided customer service and technical support for Verizon-Visible phone accounts.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2019-CURRENT</div>
-                    <div class="job-title">Business Clerk and Content Creator</div>
-                    <div class="job-company">Enigma H8 Studios</div>
-                    <div class="job-description">Developed website eh8s.com with HTML, CSS, and JavaScript, redirected through DNS to enigmah8studios.com. Music lesson tutor. Creator of advertising content. Trial reservation manager. Recording equalization and editing service assistant.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2017-2019</div>
-                    <div class="job-title">CS Associate & CSNA Resolution Specialist</div>
-                    <div class="job-company">AMAZON</div>
-                    <div class="job-description">Supervised and supported new agents in making decisions to solve daily customer problems. Served as a customer service agent.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2015-2017</div>
-                    <div class="job-title">Receptionist (Supervisor) and Tour Seller</div>
-                    <div class="job-company">Luem Entertainment Group S.A.</div>
-                    <div class="job-description">Managed bookings with new companies, organized and prepared the hostel. Sold tours.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2012-2013</div>
-                    <div class="job-title">Airport Counter</div>
-                    <div class="job-company">Interairport Services - Costa Rica SJO Airport</div>
-                    <div class="job-description">Handled passenger check-in face-to-face, traffic, and dispatch.</div>
-                </div>
-                <div class="job-item">
-                    <div class="job-year">2010-2012</div>
-                    <div class="job-title">Customer Service & Technical Support</div>
-                    <div class="job-company">Dish Network</div>
-                    <div class="job-description">Provided customer service and technical support for Dish Network. Followed company resolution steps to solve problems with signal transmission from satellite to receiving antenna for television service.</div>
-                </div>
-            </div>
+            <section class="right-column">
+                <section class="experience">
+                    <h2>Work Experience</h2>
+                    <article class="job-item">
+                        <div class="job-year">2023 - Current</div>
+                        <h3 class="job-title">Freelance Software Developer</h3>
+                        <p class="job-company">Rodija S.A.</p>
+                        <p class="job-description">Software development for video-on-demand system. Programmed MVC on GitHub with React JS, Spring Boot, MariaDB, and EC2 deployment on AWS. tuprimernegocio.org</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2021 - 2024</div>
+                        <h3 class="job-title">Domain Expert</h3>
+                        <p class="job-company">CONCENTRIX</p>
+                        <p class="job-description">Provided customer service and technical support for Google Domains. Assisted users in managing DNS, A, CNAME, MX, SPF, and TXT records; added custom names to servers and connected websites with domain names.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2020 - 2021</div>
+                        <h3 class="job-title">Chat Agent and Technical Support</h3>
+                        <p class="job-company">SYKES</p>
+                        <p class="job-description">Provided customer service and technical support for Verizon-Visible phone accounts.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2019 - Current</div>
+                        <h3 class="job-title">Business Clerk and Content Creator</h3>
+                        <p class="job-company">Enigma H8 Studios</p>
+                        <p class="job-description">Developed website eh8s.com with HTML, CSS, and JavaScript, redirected through DNS to enigmah8studios.com. Music lesson tutor. Creator of advertising content. Trial reservation manager. Recording equalization and editing service assistant.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2017 - 2019</div>
+                        <h3 class="job-title">CS Associate & CSNA Resolution Specialist</h3>
+                        <p class="job-company">AMAZON</p>
+                        <p class="job-description">Supervised and supported new agents in making decisions to solve daily customer problems. Served as a customer service agent.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2015 - 2017</div>
+                        <h3 class="job-title">Receptionist (Supervisor) and Tour Seller</h3>
+                        <p class="job-company">Luem Entertainment Group S.A.</p>
+                        <p class="job-description">Managed bookings with new companies, organized and prepared the hostel. Sold tours.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2012 - 2013</div>
+                        <h3 class="job-title">Airport Counter</h3>
+                        <p class="job-company">Interairport Services - Costa Rica SJO Airport</p>
+                        <p class="job-description">Handled passenger check-in face-to-face, traffic, and dispatch.</p>
+                    </article>
+                    <article class="job-item">
+                        <div class="job-year">2010 - 2012</div>
+                        <h3 class="job-title">Customer Service & Technical Support</h3>
+                        <p class="job-company">Dish Network</p>
+                        <p class="job-description">Provided customer service and technical support for Dish Network. Followed company resolution steps to solve problems with signal transmission from satellite to receiving antenna for television service.</p>
+                    </article>
+                </section>
+            </section>
         </div>
 
-        <h2>LANGUAGES</h2>
-        <div class="languages-horizontal">
-            <div class="language-block">
-                <div class="language-bar-container">
-                    <div class="language-bar" style="width:85%;"></div>
+        <section class="languages">
+            <h2>Languages</h2>
+            <div class="languages-horizontal">
+                <div class="language-block">
+                    <div class="language-bar-container">
+                        <div class="language-bar" style="width:85%;"></div>
+                    </div>
+                    <div class="language-name">English B2+</div>
                 </div>
-                <div class="language-name">English B2+</div>
-            </div>
-
-            <div class="language-block">
-                <div class="language-bar-container">
-                    <div class="language-bar" style="width:40%;"></div>
+                <div class="language-block">
+                    <div class="language-bar-container">
+                        <div class="language-bar" style="width:40%;"></div>
+                    </div>
+                    <div class="language-name">German A2</div>
                 </div>
-                <div class="language-name">German A2</div>
-            </div>
-
-            <div class="language-block">
-                <div class="language-bar-container">
-                    <div class="language-bar" style="width:100%;"></div>
+                <div class="language-block">
+                    <div class="language-bar-container">
+                        <div class="language-bar" style="width:100%;"></div>
+                    </div>
+                    <div class="language-name">Spanish Native</div>
                 </div>
-                <div class="language-name">Spanish Native</div>
             </div>
-        </div>
+        </section>
 
         <div class="separator"></div>
-    </div>
+    </main>
 
-    <!-- Script para html2pdf.js (dependencia externa) -->
+    <!-- External script for html2pdf.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <!-- Script personalizado para la descarga -->
+    <!-- Custom script for PDF download -->
     <script src="script.js"></script>
 </body>
 </html>
