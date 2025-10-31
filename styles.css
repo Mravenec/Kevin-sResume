@@ -52,14 +52,17 @@ body {
 
 .header h1 {
     font-size: 1.4rem; /* Smaller header */
-    font-weight: 700;
-    color: #ffffff; /* White color for PDF */
+    font-weight: 600;
+    color: var(--surface-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: currentColor; /* Will use the color property's value */
-    background-clip: text;
-    letter-spacing: -0.025em;
-    margin-bottom: 4px;
+    padding: 4px 6px;
+    margin-bottom: 6px;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    display: block;
 }
 
 /* Ensure white text in PDF */
