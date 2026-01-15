@@ -3,7 +3,7 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
     const element = document.querySelector('.content-wrapper'); // Captura solo el contenido principal para evitar márgenes extra
     const opt = {
         margin: 0,
-        filename: 'Kevin_Campos_Resume_2025.pdf',
+        filename: `Kevin_Campos_Resume_${new Date().getFullYear()}.pdf`,
         image: { type: 'jpeg', quality: 1.0 },
         html2canvas: {
             scale: 2, // Alta resolución para precisión
