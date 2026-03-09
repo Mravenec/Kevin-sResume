@@ -141,7 +141,7 @@ const translations = {
                 title: 'Desarrollador Back-End Freelance',
                 company: 'Rodieja S.A.',
                 descriptions: [
-                    'Arquitecté y desarrollé soluciones back-end escalables usando Spring Boot (Java) y .NET Core, implementando APIs RESTful siguiendo arquitectura MVC y principios SOLID. Diseñé y optimicé esquemas de bases de datos MariaDB con normalización adecuada, indexación y procedimientos almacenados para operaciones de datos de alto rendimiento.',
+                    'Arquitecté y desarrollé soluciones back-end escalables usando Spring Boot (Java) y React Js, implementando APIs RESTful siguiendo arquitectura MVC y principios SOLID. Diseñé y optimicé esquemas de bases de datos MariaDB con normalización adecuada, indexación y procedimientos almacenados para operaciones de datos de alto rendimiento.',
                     'Desplegué y mantuve aplicaciones en infraestructura en la nube de AWS (EC2, RDS, S3), implementando pipelines CI/CD con GitHub. Desarrollé módulos de nivel empresarial incluyendo sistemas de video bajo demanda y plataformas de gestión de talleres automotrices con lógica de negocio compleja para inventario, seguimiento financiero y cálculos de comisiones.'
                 ]
             },
