@@ -12,10 +12,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Download buttons in top left corner -->
-    <div id="download-container">
-        <button id="downloadBtn" aria-label="Download PDF Resume">📄 Download PDF</button>
-        <button id="downloadTxtBtn" aria-label="Download TXT Resume">📝 Download TXT</button>
+    <!-- Language selector and download buttons in top left corner -->
+    <div id="top-controls">
+        <div id="language-selector">
+            <button id="lang-en" class="lang-btn active" title="Flag of the United States">
+                <span class="flag">🇺🇸</span>
+            </button>
+            <button id="lang-es" class="lang-btn" title="Flag of Spain">
+                <span class="flag">🇪🇸</span>
+            </button>
+        </div>
+        <div id="download-container">
+            <button id="downloadBtn" aria-label="Download PDF Resume">📄 Download PDF</button>
+            <button id="downloadTxtBtn" aria-label="Download TXT Resume">📝 Download TXT</button>
+        </div>
     </div>
 
     <main class="content-wrapper">
