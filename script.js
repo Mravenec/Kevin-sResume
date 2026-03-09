@@ -28,7 +28,7 @@ const translations = {
                 title: 'Freelance Back-End Developer',
                 company: 'Rodija S.A.',
                 descriptions: [
-                    'Architected and developed scalable back-end solutions using Spring Boot (Java) and .NET Core, implementing RESTful APIs following MVC architecture and SOLID principles. Designed and optimized MariaDB database schemas with proper normalization, indexing, and stored procedures for high-performance data operations.',
+                    'Architected and developed scalable back-end solutions using Spring Boot (Java) and React JS, implementing RESTful APIs following MVC architecture and SOLID principles. Designed and optimized MariaDB database schemas with proper normalization, indexing, and stored procedures for high-performance data operations.',
                     'Deployed and maintained applications on AWS cloud infrastructure (EC2, RDS, S3), implementing CI/CD pipelines with GitHub. Developed enterprise-grade modules including video-on-demand systems and automotive workshop management platforms with complex business logic for inventory, financial tracking, and commission calculations.'
                 ]
             },
