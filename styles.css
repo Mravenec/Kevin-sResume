@@ -285,15 +285,17 @@ h2 {
     color: var(--text-primary);
 }
 
-/* Download Button */
+/* Download Buttons */
 #download-container {
     position: fixed;
     top: 8px;
     left: 8px;
     z-index: 1000;
+    display: flex;
+    gap: 4px;
 }
 
-#downloadBtn {
+#downloadBtn, #downloadTxtBtn {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--surface-color);
     border: none;
@@ -309,7 +311,7 @@ h2 {
     gap: 3px;
 }
 
-#downloadBtn:hover {
+#downloadBtn:hover, #downloadTxtBtn:hover {
     transform: translateY(-1px);
     box-shadow: var(--shadow-lg);
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
@@ -367,7 +369,7 @@ h2 {
         padding: 3px 4px;
     }
 
-    #downloadBtn {
+    #downloadBtn, #downloadTxtBtn {
         padding: 3px 6px;
         font-size: 0.55rem;
     }
