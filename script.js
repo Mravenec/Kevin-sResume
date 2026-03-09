@@ -129,7 +129,7 @@ const translations = {
         ],
         aiDescription: 'Aprovechar las herramientas de IA generativa como potenciadores de productividad dentro del ciclo de vida del desarrollo de software, dirigiendo su uso para acelerar la iteración, mejorar la resolución de problemas y optimizar los plazos de entrega. Aplicar asistencia de IA para investigación, análisis de código, soporte de depuración, documentación y prototipado rápido mientras se mantiene la propiedad completa de la ingeniería, el juicio arquitectónico y las mejores prácticas de ingeniería de software.',
         educationItems: [
-            { year: '2025 - Actual', title: 'Licenciatura en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
+            { year: '2025 - Actual', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
             { year: '2017 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'Inglés como Segundo Idioma', school: 'Universidad Técnica Nacional' },
             { year: '2009', title: 'Técnico Medio en Ingeniería Eléctrica', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
@@ -139,7 +139,7 @@ const translations = {
             {
                 year: '2023 - Actual',
                 title: 'Desarrollador Back-End Freelance',
-                company: 'Rodija S.A.',
+                company: 'Rodieja S.A.',
                 descriptions: [
                     'Arquitecté y desarrollé soluciones back-end escalables usando Spring Boot (Java) y .NET Core, implementando APIs RESTful siguiendo arquitectura MVC y principios SOLID. Diseñé y optimicé esquemas de bases de datos MariaDB con normalización adecuada, indexación y procedimientos almacenados para operaciones de datos de alto rendimiento.',
                     'Desplegué y mantuve aplicaciones en infraestructura en la nube de AWS (EC2, RDS, S3), implementando pipelines CI/CD con GitHub. Desarrollé módulos de nivel empresarial incluyendo sistemas de video bajo demanda y plataformas de gestión de talleres automotrices con lógica de negocio compleja para inventario, seguimiento financiero y cálculos de comisiones.'
