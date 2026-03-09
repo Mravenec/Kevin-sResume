@@ -3,7 +3,7 @@ const translations = {
     en: {
         downloadBtn: '📄 Download PDF',
         downloadTxtBtn: '📝 Download TXT',
-        subtitle: 'Software Developer',
+        subtitle: 'Software Engineer - Full Stack Developer',
         contact: 'Contact',
         education: 'Education',
         technicalSkills: 'Technical Skills',
@@ -116,7 +116,7 @@ const translations = {
     es: {
         downloadBtn: '📄 Descargar PDF',
         downloadTxtBtn: '📝 Descargar TXT',
-        subtitle: 'Desarrollador de Software',
+        subtitle: 'Ingeniero del Software - Full Stack Developer',
         contact: 'Contacto',
         education: 'Educación',
         technicalSkills: 'Habilidades Técnicas',
@@ -147,7 +147,7 @@ const translations = {
             },
             {
                 year: '2021 - 2024',
-                title: 'Experto de Dominio',
+                title: 'Experto de Dominios',
                 company: 'CONCENTRIX',
                 descriptions: [
                     'Brindé servicio al cliente y soporte técnico para Google Domains. Asistí a usuarios en la gestión de DNS, registros A, CNAME, MX, SPF y TXT; agregué nombres personalizados a servidores y conecté sitios web con nombres de dominio.'
