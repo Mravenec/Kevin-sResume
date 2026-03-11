@@ -19,7 +19,7 @@ const translations = {
             { year: '2025 - Current', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
             { year: '2017 - 2025', title: 'Diploma in Software Engineering (Graduated)', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'English as a Second Language', school: 'Universidad Técnica Nacional' },
-            { year: '2009', title: 'Middle Technician in Electrical Engineering', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
+            { year: '2009', title: 'Electrotechnical Technician, Middle Technician', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'High School Bachelor\'s Degree', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
@@ -132,7 +132,7 @@ const translations = {
             { year: '2025 - Actual', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
             { year: '2017 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'Inglés como Segundo Idioma', school: 'Universidad Técnica Nacional' },
-            { year: '2009', title: 'Técnico Medio en Ingeniería Eléctrica', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
+            { year: '2009', title: 'Técnico Medio en Electrotecnia', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'Bachillerato de Educación Media', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
