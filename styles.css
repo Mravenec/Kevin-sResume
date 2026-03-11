@@ -393,6 +393,12 @@ h2 {
     .education-item, .job-item {
         padding: 4px;
     }
+
+    #top-controls {
+        top: auto;
+        bottom: 8px;
+        left: 8px;
+    }
 }
 
 @media (max-width: 480px) {
