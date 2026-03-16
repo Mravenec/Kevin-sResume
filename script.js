@@ -11,10 +11,15 @@ const translations = {
         generativeAI: 'Generative AI Experience',
         languages: 'Languages',
         profile: [
-            'Back-end software engineer with strong experience building scalable web applications using Java, Spring Boot, Node.js, and .NET technologies. Proven expertise in developing RESTful APIs and designing robust database solutions. Passionate about leveraging modern technologies and generative AI tools to enhance development productivity and deliver high-quality solutions in fast-paced environments.',
-            'Currently pursuing a Bachelor\'s in Software Engineering at Universidad Técnica Nacional. I excel at implementing software engineering best practices, working with cloud deployments (AWS), applying SOLID principles, and Clean Code to create maintainable, enterprise-grade applications. Strong collaborator in agile environments with excellent problem-solving abilities.'
+            'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, and .NET technologies. I also have proven experience in developing RESTful APIs and designing robust relational database solutions, in addition to having knowledge in React JS and Angular for front-end.',
+            'I am passionate about studying and keeping up with modern technologies, as well as continuously strengthening my engineering skills to design efficient, maintainable, and scalable solutions. I enjoy tackling complex problems from a technical perspective, applying good development practices and architectural thinking to build quality software.',
+            'Currently, I am completing the last quarter of my Bachelor\'s in Software Engineering at Universidad Técnica Nacional. I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
         ],
-        aiDescription: 'Leverage generative AI tools as productivity enhancers within the software development lifecycle, directing their use to accelerate iteration, improve problem solving, and optimize delivery timelines. Apply AI assistance for research, code analysis, debugging support, documentation, and rapid prototyping while maintaining full engineering ownership, architectural judgment, and software engineering best practices.',
+        aiDescription: [
+            'I am passionate about studying and keeping up with modern technologies, leveraging generative AI tools to complement my learning process of new terms, complex technical concepts, and emerging technologies.',
+            'I integrate these tools as productivity enhancers within the software development lifecycle, using them for technical research, code analysis, debugging support, documentation generation, and rapid prototyping, which facilitates solution exploration and accelerates iteration cycles.',
+            'I always maintain a focus where engineering, architectural judgment, and good development practices remain as the foundation of the process, using AI as a strategic support to improve the efficiency and quality of software delivered in dynamic and fast-moving environments.'
+        ],
         educationItems: [
             { year: '2025 - Current', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
             { year: '2017 - 2025', title: 'Diploma in Software Engineering (Graduated)', school: 'Universidad Técnica Nacional' },
@@ -124,10 +129,15 @@ const translations = {
         generativeAI: 'Experiencia con IA Generativa',
         languages: 'Idiomas',
         profile: [
-            'Ingeniero de software back-end con sólida experiencia construyendo aplicaciones web escalables usando Java, Spring Boot, Node.js y tecnologías .NET. Comprobada experiencia en desarrollo de APIs RESTful y diseño de soluciones de bases de datos robustas. Apasionado por aprovechar tecnologías modernas y herramientas de IA generativa para mejorar la productividad del desarrollo y entregar soluciones de alta calidad en entornos de rápido movimiento.',
-            'Actualmente cursando Bachillerato en Ingeniería de Software en la Universidad Técnica Nacional. Destaco en la implementación de mejores prácticas de ingeniería de software, trabajando con despliegues en la nube (AWS), aplicando principios SOLID y Clean Code para crear aplicaciones mantenibles de nivel empresarial. Fuerte colaborador en entornos ágiles con excelentes habilidades de resolución de problemas.'
+            'Soy un ingeniero de software back-end con sólida experiencia construyendo aplicaciones web escalables utilizando Java, Spring Boot, Node.js y tecnologías .NET. También tengo experiencia comprobada en el desarrollo de APIs RESTful y en el diseño de soluciones de bases de datos relacionales robustas, además de contar con conocimientos en React JS y Angular para front-end.',
+            'Me apasiona estudiar y mantenerme al día con las tecnologías modernas, así como fortalecer continuamente mis habilidades de ingeniería para diseñar soluciones eficientes, mantenibles y escalables. Disfruto abordar problemas complejos desde una perspectiva técnica, aplicando buenas prácticas de desarrollo y pensamiento arquitectónico para construir software de calidad.',
+            'Actualmente me encuentro cursando el último cuatrimestre de mi Bachillerato en Ingeniería de Software en la Universidad Técnica Nacional. Me enfoco en implementar mejores prácticas de ingeniería de software, trabajando con despliegues en la nube (AWS) y aplicando principios como SOLID y Clean Code para desarrollar aplicaciones mantenibles de nivel empresarial. Asimismo, colaboro eficazmente en entornos ágiles y cuento con fuertes habilidades de resolución de problemas.'
         ],
-        aiDescription: 'Aprovechar las herramientas de IA generativa como potenciadores de productividad dentro del ciclo de vida del desarrollo de software, dirigiendo su uso para acelerar la iteración, mejorar la resolución de problemas y optimizar los plazos de entrega. Aplicar asistencia de IA para investigación, análisis de código, soporte de depuración, documentación y prototipado rápido mientras se mantiene la propiedad completa de la ingeniería, el juicio arquitectónico y las mejores prácticas de ingeniería de software.',
+        aiDescription: [
+            'Para mí es de suma importancia mantenerme al día con las tecnologías modernas, aprovechando herramientas de IA generativa para complementar mi proceso de aprendizaje de nuevos términos, conceptos técnicos complejos y tecnologías emergentes.',
+            'Por otro lado, integro estas herramientas como potenciadores de productividad dentro del ciclo de vida del desarrollo de software, utilizándolas para investigación técnica, análisis de código, soporte en depuración, generación de documentación y prototipado rápido, lo que facilita la exploración de soluciones y acelera los ciclos de iteración.',
+            'Además, mantengo siempre un enfoque donde la ingeniería, el criterio arquitectónico y las buenas prácticas de desarrollo permanecen como base del proceso, utilizando la IA como un apoyo estratégico para mejorar la eficiencia y la calidad del software entregado en entornos dinámicos y de rápido movimiento.'
+        ],
         educationItems: [
             { year: '2025 - Actual', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
             { year: '2017 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
@@ -260,7 +270,19 @@ function switchLanguage(lang) {
     });
     
     // Update AI description
-    document.querySelector('.ai-description').textContent = t.aiDescription;
+    const aiParagraphs = document.querySelectorAll('.ai-description');
+    if (Array.isArray(t.aiDescription)) {
+        t.aiDescription.forEach((text, index) => {
+            if (aiParagraphs[index]) {
+                aiParagraphs[index].textContent = text;
+            }
+        });
+    } else {
+        // Fallback for single paragraph
+        if (aiParagraphs[0]) {
+            aiParagraphs[0].textContent = t.aiDescription;
+        }
+    }
     
     // Update education items
     const educationItems = document.querySelectorAll('.education-item');
@@ -420,11 +442,15 @@ document.getElementById('downloadTxtBtn').addEventListener('click', function() {
     });
     
     // Extraer experiencia en IA
-    const aiDescription = document.querySelector('.ai-description').textContent.trim();
+    const aiParagraphs = document.querySelectorAll('.ai-description');
+    let aiExperienceText = '';
+    aiParagraphs.forEach(p => {
+        aiExperienceText += p.textContent.trim() + '\n\n';
+    });
     let aiSection = currentLanguage === 'es' ? '\nEXPERIENCIA CON IA GENERATIVA\n' : '\nGENERATIVE AI EXPERIENCE\n';
     let aiExperience = aiSection;
     aiExperience += '='.repeat(aiSection.length - 2) + '\n';
-    aiExperience += `${aiDescription}\n`;
+    aiExperience += aiExperienceText;
     
     // Extraer idiomas
     const languageBlocks = document.querySelectorAll('.language-block');
