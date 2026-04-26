@@ -424,3 +424,64 @@ h2 {
         font-size: 0.55rem;
     }
 }
+
+/* Toggle Summary Styles */
+.toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 8px;
+    padding: 2px 0;
+    margin: 4px 0 4px 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.6;
+}
+
+.toggle-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.toggle-icon {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+#experience-toggle-container {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+/* Compressed Mode handling */
+.compressed-mode #original-jobs-group {
+    display: none !important;
+}
+
+.compressed-mode #summary-job-group {
+    display: block !important;
+}
+
+/* Ensure summary item looks like a job item */
+.summary-item {
+    border-left-color: var(--primary-color) !important;
+}
+
+.summary-item .job-description {
+    text-align: justify;
+}
+
+/* Hide toggle during PDF/Print export */
+@media print {
+    .toggle-header, .toggle-btn {
+        display: none !important;
+    }
+    
+    /* Ensure the visible group takes full space */
+    #original-jobs-group, #summary-job-group {
+        width: 100% !important;
+    }
+}

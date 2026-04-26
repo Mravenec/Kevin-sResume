@@ -3,6 +3,7 @@ const translations = {
     en: {
         downloadBtn: '📄 Download PDF',
         downloadTxtBtn: '📝 Download TXT',
+        toggleLabel: 'Summary / Details',
         subtitle: 'Software Engineer - Full Stack Developer',
         contact: 'Contact',
         education: 'Education',
@@ -94,6 +95,21 @@ const translations = {
                 ]
             }
         ],
+        summaryJob: {
+            year: '2010 – 2021',
+            title: 'Technical Support, Customer Systems & Operations',
+            company: 'SYKES · Amazon · Dish Network · Interairport · Luem Group · Enigma H8 Studios',
+            descriptions: [
+                'Delivered multi-channel technical support (chat, ticketing, voice) for telecom and SaaS-like services, applying structured troubleshooting using internal knowledge bases (KBs).',
+                'Developed strong problem-solving and prioritization skills in high-volume, SLA-driven environments, aligning decisions with business impact and customer value.',
+                'Collaborated in team-based environments, including stand-ups and workflow coordination, improving communication and task focus.',
+                'Built product knowledge expertise, translating complex technical issues into clear solutions for end users.',
+                'Strengthened professional English communication (C1) through daily interaction with international clients.',
+                'Gained hands-on exposure to web fundamentals (HTML, CSS, JavaScript, DNS configuration and domain routing).',
+                'Supported onboarding and mentoring of peers, contributing to team efficiency and decision-making processes.',
+                'Applied process adherence and documentation-driven troubleshooting, ensuring consistency and quality in issue resolution.'
+            ]
+        },
         skillCategories: [
             {
                 header: 'Databases',
@@ -121,6 +137,7 @@ const translations = {
     es: {
         downloadBtn: '📄 Descargar PDF',
         downloadTxtBtn: '📝 Descargar TXT',
+        toggleLabel: 'Resumen / Detalles',
         subtitle: 'Ingeniero del Software - Full Stack Developer',
         contact: 'Contacto',
         education: 'Educación',
@@ -212,6 +229,21 @@ const translations = {
                 ]
             }
         ],
+        summaryJob: {
+            year: '2010 – 2021',
+            title: 'Soporte Técnico, Sistemas y Operaciones del Cliente',
+            company: 'SYKES · Amazon · Dish Network · Interairport · Luem Group · Enigma H8 Studios',
+            descriptions: [
+                'Brindé soporte técnico multicanal (chat, tickets, voz) para servicios de telecomunicaciones y tipo SaaS, aplicando resolución de problemas estructurada utilizando bases de conocimiento internas (KBs).',
+                'Desarrollé sólidas habilidades de resolución de problemas y priorización en entornos de alto volumen impulsados por SLAs, alineando las decisiones con el impacto comercial y el valor para el cliente.',
+                'Colaboré en entornos basados en equipos, incluyendo stand-ups y coordinación de flujo de trabajo, mejorando la comunicación y el enfoque en las tareas.',
+                'Construí experiencia en conocimiento del producto, traduciendo problemas técnicos complejos en soluciones claras para los usuarios finales.',
+                'Fortalecí la comunicación profesional en inglés (C1) a través de la interacción diaria con clientes internacionales.',
+                'Obtuve exposición práctica a fundamentos web (HTML, CSS, JavaScript, configuración de DNS y enrutamiento de dominios).',
+                'Apoyé el proceso de inducción y mentoría de compañeros, contribuyendo a la eficiencia del equipo y a los procesos de toma de decisiones.',
+                'Apliqué adherencia a procesos y resolución de problemas impulsada por documentación, asegurando consistencia y calidad en la resolución de problemas.'
+            ]
+        },
         skillCategories: [
             {
                 header: 'Bases de Datos',
@@ -309,6 +341,20 @@ function switchLanguage(lang) {
             });
         }
     });
+
+    // Update summary job item
+    const summaryItem = document.querySelector('.summary-item');
+    if (summaryItem && t.summaryJob) {
+        summaryItem.querySelector('.job-year').textContent = t.summaryJob.year;
+        summaryItem.querySelector('.job-title').textContent = t.summaryJob.title;
+        summaryItem.querySelector('.job-company').textContent = t.summaryJob.company;
+        const summaryDescriptions = summaryItem.querySelectorAll('.job-description');
+        t.summaryJob.descriptions.forEach((desc, index) => {
+            if (summaryDescriptions[index]) {
+                summaryDescriptions[index].textContent = desc;
+            }
+        });
+    }
     
     // Update skill categories
     const skillCategories = document.querySelectorAll('.skill-category');
@@ -339,6 +385,30 @@ function switchLanguage(lang) {
 
 document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
 document.getElementById('lang-es').addEventListener('click', () => switchLanguage('es'));
+
+// Toggle Summary Logic
+const toggleBtn = document.getElementById('experience-toggle-header');
+const experienceContainer = document.getElementById('experience-toggle-container');
+
+if (toggleBtn && experienceContainer) {
+    toggleBtn.addEventListener('click', () => {
+        const isCompressed = experienceContainer.classList.toggle('compressed-mode');
+        const icon = toggleBtn.querySelector('.toggle-icon');
+        
+        // Update Icon and Toggle Visibility
+        if (isCompressed) {
+            icon.textContent = '▶';
+            toggleBtn.classList.add('collapsed');
+            document.getElementById('summary-job-group').style.display = 'block';
+            document.getElementById('original-jobs-group').style.display = 'none';
+        } else {
+            icon.textContent = '▼';
+            toggleBtn.classList.remove('collapsed');
+            document.getElementById('summary-job-group').style.display = 'none';
+            document.getElementById('original-jobs-group').style.display = 'block';
+        }
+    });
+}
 
 // Función para descargar el PDF
 document.getElementById('downloadBtn').addEventListener('click', function() {
@@ -415,7 +485,22 @@ document.getElementById('downloadTxtBtn').addEventListener('click', function() {
     let experienceSection = currentLanguage === 'es' ? '\nEXPERIENCIA LABORAL\n' : '\nWORK EXPERIENCE\n';
     let experience = experienceSection;
     experience += '='.repeat(experienceSection.length - 2) + '\n';
+    
+    const experienceToggleContainer = document.getElementById('experience-toggle-container');
+    const isCompressed = experienceToggleContainer ? experienceToggleContainer.classList.contains('compressed-mode') : false;
+    
     jobItems.forEach(item => {
+        const isInOriginalGroup = item.closest('#original-jobs-group');
+        const isSummaryItem = item.classList.contains('summary-item');
+        
+        if (isCompressed) {
+            // If compressed: skip individual old jobs, keep recent jobs and the summary
+            if (isInOriginalGroup) return;
+        } else {
+            // If NOT compressed: skip summary item, keep everything else
+            if (isSummaryItem) return;
+        }
+        
         const year = item.querySelector('.job-year').textContent.trim();
         const title = item.querySelector('.job-title').textContent.trim();
         const company = item.querySelector('.job-company').textContent.trim();

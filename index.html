@@ -124,42 +124,75 @@
                         <p class="job-company">CONCENTRIX</p>
                         <p class="job-description">Provided customer service and technical support for Google Domains. Assisted users in managing DNS, A, CNAME, MX, SPF, and TXT records; added custom names to servers and connected websites with domain names.</p>
                     </article>
-                    <article class="job-item">
-                        <div class="job-year">2020 - 2021</div>
-                        <h3 class="job-title">Chat Agent and Technical Support</h3>
-                        <p class="job-company">SYKES</p>
-                        <p class="job-description">Provided customer service and technical support for Verizon-Visible phone accounts.</p>
-                    </article>
-                    <article class="job-item">
-                        <div class="job-year">2019 - Current</div>
-                        <h3 class="job-title">Business Clerk and Content Creator</h3>
-                        <p class="job-company">Enigma H8 Studios</p>
-                        <p class="job-description">Developed website eh8s.com with HTML, CSS, and JavaScript, redirected through DNS to enigmah8studios.com. Music lesson tutor. Creator of advertising content. Trial reservation manager. Recording equalization and editing service assistant.</p>
-                    </article>
-                    <article class="job-item">
-                        <div class="job-year">2017 - 2019</div>
-                        <h3 class="job-title">CS Associate & CSNA Resolution Specialist</h3>
-                        <p class="job-company">AMAZON</p>
-                        <p class="job-description">Supervised and supported new agents in making decisions to solve daily customer problems. Served as a customer service agent.</p>
-                    </article>
-                    <article class="job-item">
-                        <div class="job-year">2015 - 2017</div>
-                        <h3 class="job-title">Receptionist (Supervisor) and Tour Seller</h3>
-                        <p class="job-company">Luem Entertainment Group S.A.</p>
-                        <p class="job-description">Managed bookings with new companies, organized and prepared the hostel. Sold tours.</p>
-                    </article>
-                    <article class="job-item">
-                        <div class="job-year">2012 - 2013</div>
-                        <h3 class="job-title">Airport Counter</h3>
-                        <p class="job-company">Interairport Services - Costa Rica SJO Airport</p>
-                        <p class="job-description">Handled passenger check-in face-to-face, traffic, and dispatch.</p>
-                    </article>
-                    <article class="job-item">
-                        <div class="job-year">2010 - 2012</div>
-                        <h3 class="job-title">Customer Service & Technical Support</h3>
-                        <p class="job-company">Dish Network</p>
-                        <p class="job-description">Provided customer service and technical support for Dish Network. Followed company resolution steps to solve problems with signal transmission from satellite to receiving antenna for television service.</p>
-                    </article>
+                    <div id="experience-toggle-container">
+                        <button id="experience-toggle-header" class="toggle-btn" title="Toggle between Detailed and Summary view">
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                        
+                        <div id="original-jobs-group" style="display: block;">
+                            <article class="job-item">
+                                <div class="job-year">2020 - 2021</div>
+                                <h3 class="job-title">Chat Agent and Technical Support</h3>
+                                <p class="job-company">SYKES</p>
+                                <p class="job-description">Provided customer service and technical support for Verizon-Visible phone accounts.</p>
+                            </article>
+                            <article class="job-item">
+                                <div class="job-year">2019 - Current</div>
+                                <h3 class="job-title">Business Clerk and Content Creator</h3>
+                                <p class="job-company">Enigma H8 Studios</p>
+                                <p class="job-description">Developed website eh8s.com with HTML, CSS, and JavaScript, redirected through DNS to enigmah8studios.com. Music lesson tutor. Creator of advertising content. Trial reservation manager. Recording equalization and editing service assistant.</p>
+                            </article>
+                            <article class="job-item">
+                                <div class="job-year">2017 - 2019</div>
+                                <h3 class="job-title">CS Associate & CSNA Resolution Specialist</h3>
+                                <p class="job-company">AMAZON</p>
+                                <p class="job-description">Supervised and supported new agents in making decisions to solve daily customer problems. Served as a customer service agent.</p>
+                            </article>
+                            <article class="job-item">
+                                <div class="job-year">2015 - 2017</div>
+                                <h3 class="job-title">Receptionist (Supervisor) and Tour Seller</h3>
+                                <p class="job-company">Luem Entertainment Group S.A.</p>
+                                <p class="job-description">Managed bookings with new companies, organized and prepared the hostel. Sold tours.</p>
+                            </article>
+                            <article class="job-item">
+                                <div class="job-year">2012 - 2013</div>
+                                <h3 class="job-title">Airport Counter</h3>
+                                <p class="job-company">Interairport Services - Costa Rica SJO Airport</p>
+                                <p class="job-description">Handled passenger check-in face-to-face, traffic, and dispatch.</p>
+                            </article>
+                            <article class="job-item">
+                                <div class="job-year">2010 - 2012</div>
+                                <h3 class="job-title">Customer Service & Technical Support</h3>
+                                <p class="job-company">Dish Network</p>
+                                <p class="job-description">Provided customer service and technical support for Dish Network. Followed company resolution steps to solve problems with signal transmission from satellite to receiving antenna for television service.</p>
+                            </article>
+                        </div>
+
+                        <div id="summary-job-group" style="display: none;">
+                            <article class="job-item summary-item">
+                                <div class="job-year">2010 – 2021</div>
+                                <h3 class="job-title" id="summary-title">Technical Support, Customer Systems & Operations</h3>
+                                <p class="job-company" id="summary-company">SYKES · Amazon · Dish Network · Interairport · Luem Group · Enigma H8 Studios</p>
+                                <div id="summary-descriptions">
+                                    <p class="job-description">Delivered multi-channel technical support (chat, ticketing, voice) for telecom and SaaS-like services, applying structured troubleshooting using internal knowledge bases (KBs).</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Developed strong problem-solving and prioritization skills in high-volume, SLA-driven environments, aligning decisions with business impact and customer value.</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Collaborated in team-based environments, including stand-ups and workflow coordination, improving communication and task focus.</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Built product knowledge expertise, translating complex technical issues into clear solutions for end users.</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Strengthened professional English communication (C1) through daily interaction with international clients.</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Gained hands-on exposure to web fundamentals (HTML, CSS, JavaScript, DNS configuration and domain routing).</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Supported onboarding and mentoring of peers, contributing to team efficiency and decision-making processes.</p>
+                                    <div class="job-description-spacer"></div>
+                                    <p class="job-description">Applied process adherence and documentation-driven troubleshooting, ensuring consistency and quality in issue resolution.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </section>
             </section>
         </div>
