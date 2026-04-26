@@ -12,7 +12,7 @@ const translations = {
         generativeAI: 'Generative AI Experience',
         languages: 'Languages',
         profile: [
-            'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, and .NET technologies. I also have proven experience in developing RESTful APIs and designing robust relational database solutions, in addition to having knowledge in React JS and Angular for front-end.',
+            'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, and NET Framework. I also have proven experience in developing RESTful APIs and designing robust relational database solutions, in addition to having knowledge in React JS and Angular for front-end.',
             'I am passionate about studying and keeping up with modern technologies, as well as continuously strengthening my engineering skills to design efficient, maintainable, and scalable solutions. I enjoy tackling complex problems from a technical perspective, applying good development practices and architectural thinking to build quality software.',
             'Currently, I am completing the last quarter of my Bachelor\'s in Software Engineering at Universidad Técnica Nacional. I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
         ],
@@ -422,6 +422,7 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
             scale: 2, // Alta resolución para precisión
             useCORS: true,
             allowTaint: true,
+            letterRendering: true, // Fix for character overlapping in some browsers/PDF engines
             backgroundColor: '#ffffff', // Fondo blanco para consistencia
             width: element.offsetWidth, // Ancho exacto del contenido
             height: element.offsetHeight, // Alto exacto del contenido

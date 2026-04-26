@@ -480,6 +480,12 @@ h2 {
         display: none !important;
     }
     
+    .profile p {
+        text-align: left !important; /* Critical fix: Justification causes .NET overlap in PDF engines */
+        letter-spacing: 0.4px !important;
+        word-spacing: 1px !important;
+    }
+    
     /* Ensure the visible group takes full space */
     #original-jobs-group, #summary-job-group {
         width: 100% !important;
