@@ -32,7 +32,7 @@ const translations = {
             {
                 year: '2023 - Current',
                 title: 'Freelance Back-End Developer',
-                company: 'Rodija S.A.',
+                company: 'Rodieja S.A.',
                 descriptions: [
                     'Architected and developed scalable back-end solutions using Spring Boot (Java) and React JS, implementing RESTful APIs following MVC architecture and SOLID principles. Designed and optimized MariaDB database schemas with proper normalization, indexing, and stored procedures for high-performance data operations.',
                     'Deployed and maintained applications on AWS cloud infrastructure (EC2, RDS, S3), implementing CI/CD pipelines with GitHub. Developed enterprise-grade modules including video-on-demand systems and automotive workshop management platforms with complex business logic for inventory, financial tracking, and commission calculations.'
@@ -424,6 +424,7 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
             allowTaint: true,
             letterRendering: true, // Fix for character overlapping in some browsers/PDF engines
             backgroundColor: '#ffffff', // Fondo blanco para consistencia
+            logging: false,
             width: element.offsetWidth, // Ancho exacto del contenido
             height: element.offsetHeight, // Alto exacto del contenido
             scrollX: 0,
@@ -433,11 +434,49 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
             unit: 'px',
             format: [element.offsetWidth, element.offsetHeight], // Tamaño personalizado basado en el contenido
             orientation: 'portrait',
-            compress: true
+            compress: true,
+            putOnlyUsedFonts: true
         },
         pagebreak: { mode: 'avoid-all' }
     };
-    html2pdf().set(opt).from(element).save();
+    
+    // Inyectar estilos temporales para forzar colores exactos en el PDF (Evita líneas negras y pérdida de contraste)
+    const pdfStyles = document.createElement('style');
+    pdfStyles.id = 'pdf-styles-override';
+    pdfStyles.innerHTML = `
+        .header { background-color: transparent !important; }
+        .header h1 { 
+            background: #2563eb !important; 
+            color: white !important;
+            padding: 4px 6px !important;
+            border-radius: 4px !important;
+            display: block !important;
+        }
+        .header .subtitle { 
+            color: #2563eb !important; 
+            background: transparent !important;
+            margin-top: 5px !important;
+        }
+        .job-item, .education-item { border-left: 2px solid #2563eb !important; }
+        .summary-item { border-left: 2px solid #2563eb !important; }
+        .profile { border-left: 2px solid #f59e0b !important; }
+        h2 { color: #2563eb !important; }
+        .contact h2, .education h2, .skills h2, .experience h2, .ai-experience h2, .languages h2 { 
+            background-color: #2563eb !important; 
+            color: white !important;
+            -webkit-print-color-adjust: exact;
+        }
+        .profile { background: linear-gradient(135deg, #f0f9ff, #fefce8) !important; }
+    `;
+    document.head.appendChild(pdfStyles);
+    
+    const toggleBtn = document.getElementById('experience-toggle-header');
+    if (toggleBtn) toggleBtn.classList.add('no-export');
+
+    html2pdf().set(opt).from(element).save().then(() => {
+        if (toggleBtn) toggleBtn.classList.remove('no-export');
+        document.head.removeChild(pdfStyles);
+    });
 });
 
 // Función para descargar el TXT
@@ -511,6 +550,11 @@ document.getElementById('downloadTxtBtn').addEventListener('click', function() {
         experience += `  ${company}\n`;
         descriptions.forEach(desc => {
             experience += `  • ${desc.textContent.trim()}\n`;
+            // Agregar línea extra si hay un spacer después (Mejora visual en TXT)
+            const nextElement = desc.nextElementSibling;
+            if (nextElement && nextElement.classList.contains('job-description-spacer')) {
+                experience += '\n';
+            }
         });
         experience += '\n';
     });

@@ -465,6 +465,11 @@ h2 {
     display: block !important;
 }
 
+/* Improve spacing between jobs in compressed mode */
+.compressed-mode .job-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+
 /* Ensure summary item looks like a job item */
 .summary-item {
     border-left-color: var(--primary-color) !important;
@@ -474,12 +479,46 @@ h2 {
     text-align: justify;
 }
 
+/* Export Utilities */
+.no-export {
+    display: none !important;
+}
+
 /* Hide toggle during PDF/Print export */
 @media print {
-    .toggle-header, .toggle-btn {
+    .toggle-header, .toggle-btn, .no-export {
         display: none !important;
     }
     
+    /* Force colors and remove black borders/lines */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    .profile {
+        border-left: 2px solid #f59e0b !important; /* Force Yellow */
+        background: linear-gradient(135deg, #f0f9ff, #fefce8) !important;
+    }
+
+    .job-item, .education-item {
+        border-left: 2px solid #2563eb !important; /* Force Blue */
+    }
+
+    .summary-item {
+        border-left-color: #2563eb !important; /* Force Blue for summary */
+    }
+
+    header h1, h2 {
+        color: #2563eb !important;
+    }
+
+    .contact h2, .education h2, .skills h2, .experience h2, .ai-experience h2, .languages h2 {
+        background-color: #2563eb !important;
+        color: white !important;
+    }
+
     .profile p {
         text-align: left !important; /* Critical fix: Justification causes .NET overlap in PDF engines */
         letter-spacing: 0.4px !important;
