@@ -22,20 +22,23 @@ const translations = {
             'I always maintain a focus where engineering, architectural judgment, and good development practices remain as the foundation of the process, using AI as a strategic support to improve the efficiency and quality of software delivered in dynamic and fast-moving environments.'
         ],
         educationItems: [
-            { year: '2025 - Current', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
-            { year: '2017 - 2025', title: 'Diploma in Software Engineering (Graduated)', school: 'Universidad Técnica Nacional' },
+            { year: '2025 - Present', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
+            { year: '2022 - 2025', title: 'Diploma in Software Engineering (Graduated)', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'English as a Second Language', school: 'Universidad Técnica Nacional' },
             { year: '2009', title: 'Electrotechnical Technician, Middle Technician', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'High School Bachelor\'s Degree', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
             {
-                year: '2023 - Current',
+                year: '2023 - Present',
                 title: 'Freelance Back-End Developer',
                 company: 'Rodieja S.A.',
                 descriptions: [
-                    'Architected and developed scalable back-end solutions using Spring Boot (Java) and React JS, implementing RESTful APIs following MVC architecture and SOLID principles. Designed and optimized MariaDB database schemas with proper normalization, indexing, and stored procedures for high-performance data operations.',
-                    'Deployed and maintained applications on AWS cloud infrastructure (EC2, RDS, S3), implementing CI/CD pipelines with GitHub. Developed enterprise-grade modules including video-on-demand systems and automotive workshop management platforms with complex business logic for inventory, financial tracking, and commission calculations.'
+                    'Architected and implemented scalable back-end solutions using Spring Boot (Java) and React JS, developing RESTful APIs following MVC architecture and SOLID principles for high-performance enterprise applications.',
+                    'Designed and optimized MariaDB database structures through normalization, advanced indexing, and stored procedures, improving the efficiency and reliability of critical data operations.',
+                    'Deployed and maintained applications on AWS cloud infrastructure (EC2, RDS, and S3), integrating CI/CD pipelines with GitHub to streamline deployment and maintenance workflows.',
+                    'Developed complex enterprise-grade modules, including video-on-demand platforms and automotive workshop management systems featuring advanced inventory, financial tracking, and commission calculation logic.',
+                    'Collaborated directly with stakeholders to translate business requirements into scalable and maintainable technical solutions.'
                 ]
             },
             {
@@ -43,7 +46,10 @@ const translations = {
                 title: 'Domain Expert',
                 company: 'CONCENTRIX',
                 descriptions: [
-                    'Provided customer service and technical support for Google Domains. Assisted users in managing DNS, A, CNAME, MX, SPF, and TXT records; added custom names to servers and connected websites with domain names.'
+                    'Delivered specialized technical support and customer service for Google Domains, resolving domain configuration and connectivity issues for users and businesses.',
+                    'Guided customers through DNS management and configuration processes, including A, CNAME, MX, SPF, and TXT records, ensuring secure and reliable setups.',
+                    'Configured custom domain connections between servers and websites, enabling successful website deployments and domain integrations.',
+                    'Enhanced customer experience by efficiently troubleshooting technical issues and supporting users during domain migration and configuration processes.'
                 ]
             },
             {
@@ -55,7 +61,7 @@ const translations = {
                 ]
             },
             {
-                year: '2019 - Current',
+                year: '2019 - 2023',
                 title: 'Business Clerk and Content Creator',
                 company: 'Enigma H8 Studios',
                 descriptions: [
@@ -156,20 +162,23 @@ const translations = {
             'Además, mantengo siempre un enfoque donde la ingeniería, el criterio arquitectónico y las buenas prácticas de desarrollo permanecen como base del proceso, utilizando la IA como un apoyo estratégico para mejorar la eficiencia y la calidad del software entregado en entornos dinámicos y de rápido movimiento.'
         ],
         educationItems: [
-            { year: '2025 - Actual', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
-            { year: '2017 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
+            { year: '2025 - Presente', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
+            { year: '2022 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'Inglés como Segundo Idioma', school: 'Universidad Técnica Nacional' },
             { year: '2009', title: 'Técnico Medio en Electrotecnia', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'Bachillerato de Educación Media', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
             {
-                year: '2023 - Actual',
+                year: '2023 - Presente',
                 title: 'Desarrollador Back-End Freelance',
                 company: 'Rodieja S.A.',
                 descriptions: [
-                    'Arquitecté y desarrollé soluciones back-end escalables usando Spring Boot (Java) y React Js, implementando APIs RESTful siguiendo arquitectura MVC y principios SOLID. Diseñé y optimicé esquemas de bases de datos MariaDB con normalización adecuada, indexación y procedimientos almacenados para operaciones de datos de alto rendimiento.',
-                    'Desplegué y mantuve aplicaciones en infraestructura en la nube de AWS (EC2, RDS, S3), implementando pipelines CI/CD con GitHub. Desarrollé módulos de nivel empresarial incluyendo sistemas de video bajo demanda y plataformas de gestión de talleres automotrices con lógica de negocio compleja para inventario, seguimiento financiero y cálculos de comisiones.'
+                    'Arquitecté e implementé soluciones back-end escalables utilizando Spring Boot (Java) y React JS, desarrollando APIs RESTful bajo arquitectura MVC y principios SOLID para aplicaciones empresariales de alto rendimiento.',
+                    'Diseñé y optimicé bases de datos MariaDB mediante normalización, indexación avanzada y procedimientos almacenados, mejorando la eficiencia y estabilidad de operaciones críticas de datos.',
+                    'Desplegué y administré aplicaciones en infraestructura cloud de AWS (EC2, RDS y S3), integrando pipelines CI/CD con GitHub para automatizar procesos de despliegue y mantenimiento.',
+                    'Desarrollé módulos empresariales complejos, incluyendo plataformas de video bajo demanda y sistemas de gestión para talleres automotrices con lógica avanzada de inventario, seguimiento financiero y cálculo de comisiones.',
+                    'Colaboré directamente con stakeholders para transformar requerimientos de negocio en soluciones técnicas escalables y mantenibles.'
                 ]
             },
             {
@@ -177,7 +186,10 @@ const translations = {
                 title: 'Experto de Dominios',
                 company: 'CONCENTRIX',
                 descriptions: [
-                    'Brindé servicio al cliente y soporte técnico para Google Domains. Asistí a usuarios en la gestión de DNS, registros A, CNAME, MX, SPF y TXT; agregué nombres personalizados a servidores y conecté sitios web con nombres de dominio.'
+                    'Brindé soporte técnico especializado y atención al cliente para servicios de Google Domains, resolviendo incidencias relacionadas con configuración y conectividad de dominios.',
+                    'Asesoré a usuarios en la gestión y configuración de registros DNS, incluyendo A, CNAME, MX, SPF y TXT, garantizando configuraciones seguras y funcionales.',
+                    'Configuré conexiones entre dominios, servidores y sitios web personalizados, facilitando implementaciones exitosas para clientes y negocios.',
+                    'Mejoré la experiencia del cliente mediante resolución eficiente de problemas técnicos y acompañamiento en procesos de migración y configuración de dominios.'
                 ]
             },
             {
@@ -189,7 +201,7 @@ const translations = {
                 ]
             },
             {
-                year: '2019 - Actual',
+                year: '2019 - 2023',
                 title: 'Auxiliar Administrativo y Creador de Contenido',
                 company: 'Enigma H8 Studios',
                 descriptions: [
