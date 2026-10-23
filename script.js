@@ -17,9 +17,9 @@ const translations = {
             'I hold a Bachelor\'s Degree in Software Engineering from Universidad Técnica Nacional (2026). I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
         ],
         aiDescription: [
-            'I am passionate about studying and keeping up with modern technologies, leveraging generative AI tools to complement my learning process of new terms, complex technical concepts, and emerging technologies.',
-            'I integrate these tools as productivity enhancers within the software development lifecycle, using them for technical research, code analysis, debugging support, documentation generation, and rapid prototyping, which facilitates solution exploration and accelerates iteration cycles.',
-            'I always maintain a focus where engineering, architectural judgment, and good development practices remain as the foundation of the process, using AI as a strategic support to improve the efficiency and quality of software delivered in dynamic and fast-moving environments.'
+            'For me, it is of the utmost importance to stay up to date with modern technologies, using generative AI tools to complement my learning process of new terms, complex technical concepts, and emerging technologies.',
+            'On the other hand, I integrate these tools into the software development lifecycle by directing them layer by layer: first the database, then the backend, and then the frontend, with clear rules for architecture, tests, and evidence before considering each change closed. I use them for technical research, code analysis, debugging support, documentation, and implementation within that order, which speeds up iteration without skipping verification.',
+            'In addition, I always keep engineering judgment as the foundation of the process. AI proposes and executes within those rules, and I review the result, the tests, and the quality of the software before moving it forward, in the same way in Cursor, Claude, and the rest of the tools.'
         ],
         educationItems: [
             { year: '2022 - 2026', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
@@ -134,7 +134,7 @@ const translations = {
             },
             {
                 header: 'AI & Development Tools',
-                list: 'Generative AI tools (ChatGPT, Gemini, Deepseek, Claude, Grok, Kimi, GitHub Copilot, Windsurf, Cursor, Antigravity) for development support, code review, research, and problem-solving'
+                list: 'Generative AI tools (I use the current models of ChatGPT, Gemini, Deepseek, Claude, Muse, Grok, Kimi, GitHub Copilot, Windsurf, Cursor, Antigravity) to direct development layer by layer, review code with evidence and tests, research, and solve problems while maintaining architectural judgment'
             }
         ],
         languageNames: ['English C1', 'German A2', 'Spanish Native']
@@ -157,8 +157,8 @@ const translations = {
         ],
         aiDescription: [
             'Para mí es de suma importancia mantenerme al día con las tecnologías modernas, aprovechando herramientas de IA generativa para complementar mi proceso de aprendizaje de nuevos términos, conceptos técnicos complejos y tecnologías emergentes.',
-            'Por otro lado, integro estas herramientas como potenciadores de productividad dentro del ciclo de vida del desarrollo de software, utilizándolas para investigación técnica, análisis de código, soporte en depuración, generación de documentación y prototipado rápido, lo que facilita la exploración de soluciones y acelera los ciclos de iteración.',
-            'Además, mantengo siempre un enfoque donde la ingeniería, el criterio arquitectónico y las buenas prácticas de desarrollo permanecen como base del proceso, utilizando la IA como un apoyo estratégico para mejorar la eficiencia y la calidad del software entregado en entornos dinámicos y de rápido movimiento.'
+            'Por otro lado, integro estas herramientas en el ciclo de desarrollo de software dirigiéndolas por capas: primero la base de datos, luego el backend y después el frontend, con reglas claras de arquitectura, pruebas y evidencia antes de dar por cerrado cada cambio. Las utilizo para investigación técnica, análisis de código, soporte en depuración, documentación e implementación dentro de ese orden, lo que acelera la iteración sin saltarse la verificación.',
+            'Además, mantengo siempre el criterio de ingeniería como base del proceso. La IA propone y ejecuta dentro de esas reglas, y yo reviso el resultado, las pruebas y la calidad del software antes de avanzarlo, de la misma forma en Cursor, Claude y el resto de herramientas.'
         ],
         educationItems: [
             { year: '2022 - 2026', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
@@ -273,7 +273,7 @@ const translations = {
             },
             {
                 header: 'IA & Herramientas de Desarrollo',
-                list: 'Herramientas de IA generativa (ChatGPT, Gemini, Deepseek, Claude, Grok, Kimi, GitHub Copilot, Windsurf, Cursor, Antigravity) para soporte de desarrollo, revisión de código, investigación y resolución de problemas'
+                list: 'Herramientas de IA generativa (Uso los modelos actuales de ChatGPT, Gemini, Deepseek, Claude, Muse, Grok, Kimi, GitHub Copilot, Windsurf, Cursor, Antigravity) para dirigir el desarrollo por capas, revisar código con evidencia y pruebas, investigar y resolver problemas manteniendo el criterio de arquitectura'
             }
         ],
         languageNames: ['Inglés C1', 'Alemán A2', 'Español Nativo']
