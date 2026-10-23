@@ -30,7 +30,7 @@ const translations = {
         jobItems: [
             {
                 year: '2023 - Present',
-                title: 'Freelance Back-End Developer',
+                title: 'Freelance Full-Stack Developer',
                 company: 'Rodieja S.A.',
                 descriptions: [
                     'Architected and implemented scalable back-end solutions using Spring Boot (Java) and React JS, developing RESTful APIs following MVC architecture and SOLID principles for high-performance enterprise applications.',
@@ -169,7 +169,7 @@ const translations = {
         jobItems: [
             {
                 year: '2023 - Presente',
-                title: 'Desarrollador Back-End Freelance',
+                title: 'Desarrollador Full-Stack Freelance',
                 company: 'Rodieja S.A.',
                 descriptions: [
                     'Arquitecté e implementé soluciones back-end escalables utilizando Spring Boot (Java) y React JS, desarrollando APIs RESTful bajo arquitectura MVC y principios SOLID para aplicaciones empresariales de alto rendimiento.',
