@@ -37,7 +37,8 @@ const translations = {
                     'Designed and optimized MariaDB database structures through normalization, advanced indexing, and stored procedures, improving the efficiency and reliability of critical data operations.',
                     'Deployed and maintained applications on AWS cloud infrastructure (EC2, RDS, and S3), integrating CI/CD pipelines with GitHub to streamline deployment and maintenance workflows.',
                     'Developed complex enterprise-grade modules, including video-on-demand platforms and automotive workshop management systems featuring advanced inventory, financial tracking, and commission calculation logic.',
-                    'Collaborated directly with stakeholders to translate business requirements into scalable and maintainable technical solutions.'
+                    'Collaborated directly with stakeholders to translate business requirements into scalable and maintainable technical solutions.',
+                    'Created an AI harness for MariaDB, Spring Boot, JOOQ, and React in order to deliver results faster on each requested project, following software engineering best practices.'
                 ]
             },
             {
@@ -176,7 +177,8 @@ const translations = {
                     'Diseñé y optimicé bases de datos MariaDB mediante normalización, indexación avanzada y procedimientos almacenados, mejorando la eficiencia y estabilidad de operaciones críticas de datos.',
                     'Desplegué y administré aplicaciones en infraestructura cloud de AWS (EC2, RDS y S3), integrando pipelines CI/CD con GitHub para automatizar procesos de despliegue y mantenimiento.',
                     'Desarrollé módulos empresariales complejos, incluyendo plataformas de video bajo demanda y sistemas de gestión para talleres automotrices con lógica avanzada de inventario, seguimiento financiero y cálculo de comisiones.',
-                    'Colaboré directamente con stakeholders para transformar requerimientos de negocio en soluciones técnicas escalables y mantenibles.'
+                    'Colaboré directamente con stakeholders para transformar requerimientos de negocio en soluciones técnicas escalables y mantenibles.',
+                    'Creé un AI harness para MariaDB, Spring Boot, JOOQ y React con el fin de entregar resultados más rápido en cada uno de los proyectos solicitados, siguiendo buenas prácticas de ingeniería.'
                 ]
             },
             {
