@@ -18,8 +18,8 @@ const translations = {
         ],
         aiDescription: [
             'For me, it is of the utmost importance to stay up to date with modern technologies, using generative AI tools to complement my learning process of new terms, complex technical concepts, and emerging technologies.',
-            'On the other hand, I integrate these tools into the software development lifecycle by directing them layer by layer: first the database, then the backend, and then the frontend, with clear rules for architecture, tests, and evidence before considering each change closed. I use them for technical research, code analysis, debugging support, documentation, and implementation within that order, which speeds up iteration without skipping verification.',
-            'In addition, I always keep engineering judgment as the foundation of the process. AI proposes and executes within those rules, and I review the result, the tests, and the quality of the software before moving it forward, in the same way in Cursor, Claude, and the rest of the tools.'
+            'On the other hand, I work in an agentic way: I integrate these tools into the software development lifecycle by directing them layer by layer: first the database, then the backend, and then the frontend, with clear rules for architecture, tests, and evidence before considering each change closed. I use them for technical research, code analysis, debugging support, documentation, and implementation within that order, which speeds up iteration without skipping verification.',
+            'In addition, I always keep engineering judgment as the foundation of the process. AI proposes and executes within those rules, procedures, and specifications that I design through day-to-day experience, adapting to improvement, and I then review the result, the tests, and the quality of the software before moving it forward, in the same way in Cursor, Claude, and the rest of the tools.'
         ],
         educationItems: [
             { year: '2022 - 2026', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
@@ -157,8 +157,8 @@ const translations = {
         ],
         aiDescription: [
             'Para mí es de suma importancia mantenerme al día con las tecnologías modernas, aprovechando herramientas de IA generativa para complementar mi proceso de aprendizaje de nuevos términos, conceptos técnicos complejos y tecnologías emergentes.',
-            'Por otro lado, integro estas herramientas en el ciclo de desarrollo de software dirigiéndolas por capas: primero la base de datos, luego el backend y después el frontend, con reglas claras de arquitectura, pruebas y evidencia antes de dar por cerrado cada cambio. Las utilizo para investigación técnica, análisis de código, soporte en depuración, documentación e implementación dentro de ese orden, lo que acelera la iteración sin saltarse la verificación.',
-            'Además, mantengo siempre el criterio de ingeniería como base del proceso. La IA propone y ejecuta dentro de esas reglas, y yo reviso el resultado, las pruebas y la calidad del software antes de avanzarlo, de la misma forma en Cursor, Claude y el resto de herramientas.'
+            'Por otro lado, trabajo de forma agéntica: integro estas herramientas en el ciclo de desarrollo de software dirigiéndolas por capas: primero la base de datos, luego el backend y después el frontend, con reglas claras de arquitectura, pruebas y evidencia antes de dar por cerrado cada cambio. Las utilizo para investigación técnica, análisis de código, soporte en depuración, documentación e implementación dentro de ese orden, lo que acelera la iteración sin saltarse la verificación.',
+            'Además, mantengo siempre el criterio de ingeniería como base del proceso. La IA propone y ejecuta dentro de esas reglas, procedimientos y especificaciones que yo diseño durante la experiencia del día a día, adaptándome a la mejora, y posteriormente reviso el resultado, las pruebas y la calidad del software antes de avanzarlo, de la misma forma en Cursor, Claude y el resto de herramientas.'
         ],
         educationItems: [
             { year: '2022 - 2026', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
