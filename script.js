@@ -12,7 +12,7 @@ const translations = {
         generativeAI: 'Generative AI Experience',
         languages: 'Languages',
         profile: [
-            'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, and NET Framework. I also have proven experience in developing RESTful APIs and designing robust relational database solutions, in addition to having knowledge in React JS and Angular for front-end.',
+            'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, NET Framework, and PHP. I also have proven experience in developing RESTful APIs, designing robust relational database solutions, and developing and maintaining Drupal 11 sites (modules, themes with Twig and Sass, and configuration), in addition to having knowledge in React JS and Angular for front-end.',
             'I am passionate about studying and keeping up with modern technologies, as well as continuously strengthening my engineering skills to design efficient, maintainable, and scalable solutions. I work in an agentic way: I write rules, skills, and specs, direct implementation layer by layer, and review tests and quality before considering each change closed. I enjoy tackling complex problems from a technical perspective, applying good development practices and architectural thinking to build quality software.',
             'I hold a Bachelor\'s Degree in Software Engineering from Universidad Técnica Nacional (2026). I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
         ],
@@ -28,6 +28,19 @@ const translations = {
             { year: '2009', title: 'High School Bachelor\'s Degree', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
+            {
+                year: '2026 - Present',
+                title: 'Freelance Drupal Full-Stack Developer',
+                company: 'KEBOCA',
+                descriptions: [
+                    'I develop and maintain sites on Drupal 11 with PHP, Composer, Drush, and DDEV. I build custom modules and themes, with Twig and Sass, and the site configuration.',
+                    'I direct Cursor and Claude agents with rules and skills for the stack. In PHP they follow Drupal standards: dependency injection, the Drupal API instead of native PHP, and YAML configuration before writing new code. In the theme they follow Twig and Sass. They reuse patterns that already exist.',
+                    'I review each step: I approve the change, test it with Drush on DDEV, and review the PHP against the coding standards and the quality of the result before considering it closed.',
+                    'I built a site from scratch on Drupal 11 with DDEV: a custom module, themes, and kiosk flows for visitor sign-in and sign-out, pre-registration, a staff panel, a visit log, and people management.',
+                    'I provide maintenance and development on one university site (Drupal 11, Acquia, DDEV). The work includes accessibility, calendar and event import, payments, a program finder, users with CAS, media, and the site theme.',
+                    'I provide maintenance and development on another university site (Drupal 10, DDEV). The work includes search, courses, events, Stripe payments, OpenID, and the academic content of the site.'
+                ]
+            },
             {
                 year: '2023 - Present',
                 title: 'Freelance Full-Stack Developer',
@@ -106,14 +119,8 @@ const translations = {
             title: 'Technical Support, Customer Systems & Operations',
             company: 'SYKES · Amazon · Dish Network · Interairport · Luem Group · Enigma H8 Studios',
             descriptions: [
-                'Delivered multi-channel technical support (chat, ticketing, voice) for telecom and SaaS-like services, applying structured troubleshooting using internal knowledge bases (KBs).',
-                'Developed strong problem-solving and prioritization skills in high-volume, SLA-driven environments, aligning decisions with business impact and customer value.',
-                'Collaborated in team-based environments, including stand-ups and workflow coordination, improving communication and task focus.',
-                'Built product knowledge expertise, translating complex technical issues into clear solutions for end users.',
-                'Strengthened professional English communication (C1) through daily interaction with international clients.',
-                'Gained hands-on exposure to web fundamentals (HTML, CSS, JavaScript, DNS configuration and domain routing).',
-                'Supported onboarding and mentoring of peers, contributing to team efficiency and decision-making processes.',
-                'Applied process adherence and documentation-driven troubleshooting, ensuring consistency and quality in issue resolution.'
+                'Delivered multi-channel technical support in high-volume environments, with structured troubleshooting following KBs, SLA prioritization, and English (C1) communication with international clients.',
+                'Supported onboarding and mentoring of peers, keeping clear processes for consistent resolution.'
             ]
         },
         skillCategories: [
@@ -123,15 +130,15 @@ const translations = {
             },
             {
                 header: 'Backend Development',
-                list: 'Java (Spring Boot, Maven, JPA/JOOQ), C# (.NET, Dapper, EF Core), RESTful API design, MVC pattern, SOLID principles, Node.js (Express, Sequelize), CMS integration and development'
+                list: 'Java (Spring Boot, Maven, JPA/JOOQ), C# (.NET, Dapper, EF Core), PHP (Drupal 10 and 11, Composer, Drush, dependency injection, Drupal API, YAML configuration), RESTful API design, MVC pattern, SOLID principles, Node.js (Express, Sequelize), CMS integration and development'
             },
             {
                 header: 'Frontend Development',
-                list: 'React JS, Angular, JavaScript (ES6+), HTML5, CSS3, Bootstrap, JSF-PrimeFaces, Vue.js'
+                list: 'React JS, Angular, JavaScript (ES6+), HTML5, CSS3, Sass, Twig, Bootstrap, JSF-PrimeFaces, Vue.js'
             },
             {
                 header: 'Cloud & DevOps',
-                list: 'AWS (EC2, RDS, S3, cloud-based deployments, Git/GitHub, CI/CD pipelines, testing methodologies, web security best practices'
+                list: 'AWS (EC2, RDS, S3), cloud-based deployments, Git/GitHub, CI/CD pipelines, DDEV, testing methodologies, web security best practices'
             },
             {
                 header: 'AI & Development Tools',
@@ -152,7 +159,7 @@ const translations = {
         generativeAI: 'Experiencia con IA Generativa',
         languages: 'Idiomas',
         profile: [
-            'Soy un ingeniero de software back-end con sólida experiencia construyendo aplicaciones web escalables utilizando Java, Spring Boot, Node.js y tecnologías .NET. También tengo experiencia comprobada en el desarrollo de APIs RESTful y en el diseño de soluciones de bases de datos relacionales robustas, además de contar con conocimientos en React JS y Angular para front-end.',
+            'Soy un ingeniero de software back-end con sólida experiencia construyendo aplicaciones web escalables utilizando Java, Spring Boot, Node.js, tecnologías .NET y PHP. También tengo experiencia comprobada en el desarrollo de APIs RESTful, en el diseño de soluciones de bases de datos relacionales robustas y en el desarrollo y mantenimiento de sitios en Drupal 11 (módulos, temas con Twig y Sass, y configuración), además de contar con conocimientos en React JS y Angular para front-end.',
             'Me apasiona estudiar y mantenerme al día con las tecnologías modernas, así como fortalecer continuamente mis habilidades de ingeniería para diseñar soluciones eficientes, mantenibles y escalables. Trabajo de forma agéntica: escribo rules, skills y specs, dirijo la implementación por capas y reviso pruebas y calidad antes de dar por cerrado cada cambio. Disfruto abordar problemas complejos desde una perspectiva técnica, aplicando buenas prácticas de desarrollo y pensamiento arquitectónico para construir software de calidad.',
             'Cuento con el Bachillerato en Ingeniería de Software de la Universidad Técnica Nacional (2026). Me enfoco en implementar mejores prácticas de ingeniería de software, trabajando con despliegues en la nube (AWS) y aplicando principios como SOLID y Clean Code para desarrollar aplicaciones mantenibles de nivel empresarial. Asimismo, colaboro eficazmente en entornos ágiles y cuento con fuertes habilidades de resolución de problemas.'
         ],
@@ -168,6 +175,19 @@ const translations = {
             { year: '2009', title: 'Bachillerato de Educación Media', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
         ],
         jobItems: [
+            {
+                year: '2026 - Presente',
+                title: 'Desarrollador Full-Stack Freelance de Drupal',
+                company: 'KEBOCA',
+                descriptions: [
+                    'Desarrollo y mantengo sitios en Drupal 11 con PHP, Composer, Drush y DDEV. Construyo módulos y temas propios, con Twig y Sass, y la configuración del sitio.',
+                    'Dirijo agentes de Cursor y Claude con rules y skills del stack. En PHP siguen los estándares de Drupal: inyección de dependencias, la API de Drupal en lugar de PHP nativo, y configuración en YAML antes de escribir código nuevo. En el tema siguen Twig y Sass. Reutilizan los patrones que ya existen.',
+                    'Reviso cada paso: apruebo el cambio, lo pruebo con Drush en DDEV y reviso el PHP con los estándares de código y la calidad del resultado antes de darlo por cerrado.',
+                    'Construí desde cero un sitio en Drupal 11 con DDEV: módulo propio, temas y flujos de kiosco para el registro y la salida de visitantes, pre-registro, panel de personal, bitácora de visitas y gestión de personas.',
+                    'Doy mantenimiento y desarrollo en el sitio de una universidad (Drupal 11, Acquia, DDEV). El trabajo incluye accesibilidad, calendario e importación de eventos, pagos, buscador de programas, usuarios con CAS, medios y el tema del sitio.',
+                    'Doy mantenimiento y desarrollo en el sitio de otra universidad (Drupal 10, DDEV). El trabajo incluye búsqueda, cursos, eventos, pagos con Stripe, OpenID y el contenido académico del sitio.'
+                ]
+            },
             {
                 year: '2023 - Presente',
                 title: 'Desarrollador Full-Stack Freelance',
@@ -246,14 +266,8 @@ const translations = {
             title: 'Soporte Técnico, Sistemas y Operaciones del Cliente',
             company: 'SYKES · Amazon · Dish Network · Interairport · Luem Group · Enigma H8 Studios',
             descriptions: [
-                'Brindé soporte técnico multicanal (chat, tickets, voz) para servicios de telecomunicaciones y tipo SaaS, aplicando resolución de problemas estructurada utilizando bases de conocimiento internas (KBs).',
-                'Desarrollé sólidas habilidades de resolución de problemas y priorización en entornos de alto volumen impulsados por SLAs, alineando las decisiones con el impacto comercial y el valor para el cliente.',
-                'Colaboré en entornos basados en equipos, incluyendo stand-ups y coordinación de flujo de trabajo, mejorando la comunicación y el enfoque en las tareas.',
-                'Construí experiencia en conocimiento del producto, traduciendo problemas técnicos complejos en soluciones claras para los usuarios finales.',
-                'Fortalecí la comunicación profesional en inglés (C1) a través de la interacción diaria con clientes internacionales.',
-                'Obtuve exposición práctica a fundamentos web (HTML, CSS, JavaScript, configuración de DNS y enrutamiento de dominios).',
-                'Apoyé el proceso de inducción y mentoría de compañeros, contribuyendo a la eficiencia del equipo y a los procesos de toma de decisiones.',
-                'Apliqué adherencia a procesos y resolución de problemas impulsada por documentación, asegurando consistencia y calidad en la resolución de problemas.'
+                'Brindé soporte técnico multicanal en entornos de alto volumen, con resolución estructurada siguiendo KBs, priorización por SLA y comunicación en inglés (C1) con clientes internacionales.',
+                'Apoyé la inducción y la mentoría de compañeros, manteniendo procesos claros para una resolución consistente.'
             ]
         },
         skillCategories: [
@@ -263,15 +277,15 @@ const translations = {
             },
             {
                 header: 'Desarrollo Backend',
-                list: 'Java (Spring Boot, Maven, JPA/JOOQ), C# (.NET, Dapper, EF Core), diseño de APIs RESTful, patrón MVC, principios SOLID, Node.js (Express, Sequelize), integración y desarrollo de CMS'
+                list: 'Java (Spring Boot, Maven, JPA/JOOQ), C# (.NET, Dapper, EF Core), PHP (Drupal 10 y 11, Composer, Drush, inyección de dependencias, API de Drupal, configuración en YAML), diseño de APIs RESTful, patrón MVC, principios SOLID, Node.js (Express, Sequelize), integración y desarrollo de CMS'
             },
             {
                 header: 'Desarrollo Frontend',
-                list: 'React JS, Angular, JavaScript (ES6+), HTML5, CSS3, Bootstrap, JSF-PrimeFaces, Vue.js'
+                list: 'React JS, Angular, JavaScript (ES6+), HTML5, CSS3, Sass, Twig, Bootstrap, JSF-PrimeFaces, Vue.js'
             },
             {
                 header: 'Cloud & DevOps',
-                list: 'AWS (EC2, RDS, S3, despliegues basados en la nube, Git/GitHub, pipelines CI/CD, metodologías de prueba, mejores prácticas de seguridad web'
+                list: 'AWS (EC2, RDS, S3), despliegues basados en la nube, Git/GitHub, pipelines CI/CD, DDEV, metodologías de prueba, mejores prácticas de seguridad web'
             },
             {
                 header: 'IA & Herramientas de Desarrollo',
