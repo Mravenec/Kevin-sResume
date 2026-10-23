@@ -14,7 +14,7 @@ const translations = {
         profile: [
             'I am a back-end software engineer with solid experience building scalable web applications using Java, Spring Boot, Node.js, and NET Framework. I also have proven experience in developing RESTful APIs and designing robust relational database solutions, in addition to having knowledge in React JS and Angular for front-end.',
             'I am passionate about studying and keeping up with modern technologies, as well as continuously strengthening my engineering skills to design efficient, maintainable, and scalable solutions. I enjoy tackling complex problems from a technical perspective, applying good development practices and architectural thinking to build quality software.',
-            'Currently, I am completing the last quarter of my Bachelor\'s in Software Engineering at Universidad Técnica Nacional. I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
+            'I hold a Bachelor\'s Degree in Software Engineering from Universidad Técnica Nacional (2026). I focus on implementing software engineering best practices, working with cloud deployments (AWS), and applying principles like SOLID and Clean Code to develop maintainable, enterprise-grade applications. Likewise, I collaborate effectively in agile environments and have strong problem-solving abilities.'
         ],
         aiDescription: [
             'I am passionate about studying and keeping up with modern technologies, leveraging generative AI tools to complement my learning process of new terms, complex technical concepts, and emerging technologies.',
@@ -22,8 +22,7 @@ const translations = {
             'I always maintain a focus where engineering, architectural judgment, and good development practices remain as the foundation of the process, using AI as a strategic support to improve the efficiency and quality of software delivered in dynamic and fast-moving environments.'
         ],
         educationItems: [
-            { year: '2025 - Present', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
-            { year: '2022 - 2025', title: 'Diploma in Software Engineering (Graduated)', school: 'Universidad Técnica Nacional' },
+            { year: '2022 - 2026', title: 'Bachelor\'s Degree in Software Engineering', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'English as a Second Language', school: 'Universidad Técnica Nacional' },
             { year: '2009', title: 'Electrotechnical Technician, Middle Technician', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'High School Bachelor\'s Degree', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
@@ -154,7 +153,7 @@ const translations = {
         profile: [
             'Soy un ingeniero de software back-end con sólida experiencia construyendo aplicaciones web escalables utilizando Java, Spring Boot, Node.js y tecnologías .NET. También tengo experiencia comprobada en el desarrollo de APIs RESTful y en el diseño de soluciones de bases de datos relacionales robustas, además de contar con conocimientos en React JS y Angular para front-end.',
             'Me apasiona estudiar y mantenerme al día con las tecnologías modernas, así como fortalecer continuamente mis habilidades de ingeniería para diseñar soluciones eficientes, mantenibles y escalables. Disfruto abordar problemas complejos desde una perspectiva técnica, aplicando buenas prácticas de desarrollo y pensamiento arquitectónico para construir software de calidad.',
-            'Actualmente me encuentro cursando el último cuatrimestre de mi Bachillerato en Ingeniería de Software en la Universidad Técnica Nacional. Me enfoco en implementar mejores prácticas de ingeniería de software, trabajando con despliegues en la nube (AWS) y aplicando principios como SOLID y Clean Code para desarrollar aplicaciones mantenibles de nivel empresarial. Asimismo, colaboro eficazmente en entornos ágiles y cuento con fuertes habilidades de resolución de problemas.'
+            'Cuento con el Bachillerato en Ingeniería de Software de la Universidad Técnica Nacional (2026). Me enfoco en implementar mejores prácticas de ingeniería de software, trabajando con despliegues en la nube (AWS) y aplicando principios como SOLID y Clean Code para desarrollar aplicaciones mantenibles de nivel empresarial. Asimismo, colaboro eficazmente en entornos ágiles y cuento con fuertes habilidades de resolución de problemas.'
         ],
         aiDescription: [
             'Para mí es de suma importancia mantenerme al día con las tecnologías modernas, aprovechando herramientas de IA generativa para complementar mi proceso de aprendizaje de nuevos términos, conceptos técnicos complejos y tecnologías emergentes.',
@@ -162,8 +161,7 @@ const translations = {
             'Además, mantengo siempre un enfoque donde la ingeniería, el criterio arquitectónico y las buenas prácticas de desarrollo permanecen como base del proceso, utilizando la IA como un apoyo estratégico para mejorar la eficiencia y la calidad del software entregado en entornos dinámicos y de rápido movimiento.'
         ],
         educationItems: [
-            { year: '2025 - Presente', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
-            { year: '2022 - 2025', title: 'Diplomado en Ingeniería de Software (Graduado)', school: 'Universidad Técnica Nacional' },
+            { year: '2022 - 2026', title: 'Bachillerato en Ingeniería de Software', school: 'Universidad Técnica Nacional' },
             { year: '2011', title: 'Inglés como Segundo Idioma', school: 'Universidad Técnica Nacional' },
             { year: '2009', title: 'Técnico Medio en Electrotecnia', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' },
             { year: '2009', title: 'Bachillerato de Educación Media', school: 'Colegio Técnico Profesional Jesús Ocaña Rojas' }
