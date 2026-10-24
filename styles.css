@@ -445,6 +445,50 @@ h2 {
     }
 }
 
+/* The phone layout stays on screen. The PDF always measures the letter sheet. */
+html.pdf-letter .content-wrapper {
+    width: 1000px;
+    max-width: 1000px;
+    min-height: calc(1000px * 11 / 8.5);
+    margin: 0 auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+html.pdf-letter .main-content {
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+}
+
+html.pdf-letter .header h1 {
+    font-size: 1.4rem;
+}
+
+html.pdf-letter .subtitle {
+    font-size: 0.7rem;
+}
+
+html.pdf-letter h2 {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+}
+
+html.pdf-letter .languages-horizontal {
+    flex-direction: row;
+    gap: 8px;
+}
+
+html.pdf-letter .contact-item {
+    padding: 3px 4px;
+}
+
+html.pdf-letter .education-item,
+html.pdf-letter .job-item {
+    padding: 5px;
+}
+
 /* Toggle Summary Styles */
 .toggle-btn {
     background: none;

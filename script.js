@@ -733,30 +733,35 @@ function paintAtsResume(doc, root, place) {
 function buildAtsResumePdf() {
     const { jsPDF } = window.jspdf;
     const root = document.querySelector('.content-wrapper');
-    const rect = root.getBoundingClientRect();
     const pageW = 612;
     const pageH = 792;
-    const natural = 72 / 96;
-    const fit = Math.min(pageW / (rect.width * natural), pageH / (rect.height * natural));
-    const scale = natural * fit;
-    const drawnW = rect.width * scale;
-    const drawnH = rect.height * scale;
-    const doc = new jsPDF({
-        unit: 'pt',
-        format: 'letter',
-        compress: true
-    });
-    doc.setProperties({
-        title: 'Kevin Campos Gonzalez - Resume',
-        author: 'Kevin Campos Gonzalez'
-    });
-    paintAtsResume(doc, root, {
-        scaleX: scale,
-        scaleY: scale,
-        offsetX: (pageW - drawnW) / 2,
-        offsetY: (pageH - drawnH) / 2
-    });
-    return doc;
+    document.documentElement.classList.add('pdf-letter');
+    try {
+        const rect = root.getBoundingClientRect();
+        const natural = 72 / 96;
+        const fit = Math.min(pageW / (rect.width * natural), pageH / (rect.height * natural));
+        const scale = natural * fit;
+        const drawnW = rect.width * scale;
+        const drawnH = rect.height * scale;
+        const doc = new jsPDF({
+            unit: 'pt',
+            format: [pageW, pageH],
+            compress: true
+        });
+        doc.setProperties({
+            title: 'Kevin Campos Gonzalez - Resume',
+            author: 'Kevin Campos Gonzalez'
+        });
+        paintAtsResume(doc, root, {
+            scaleX: scale,
+            scaleY: scale,
+            offsetX: (pageW - drawnW) / 2,
+            offsetY: (pageH - drawnH) / 2
+        });
+        return doc;
+    } finally {
+        document.documentElement.classList.remove('pdf-letter');
+    }
 }
 
 document.getElementById('downloadBtn').addEventListener('click', function() {
