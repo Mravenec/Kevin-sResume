@@ -329,8 +329,8 @@ function jobArticle(job, extraClass) {
 }
 
 function bindExperienceToggle() {
-    const toggleBtn = document.getElementById('experience-toggle-header');
-    const experienceContainer = document.getElementById('experience-toggle-container');
+const toggleBtn = document.getElementById('experience-toggle-header');
+const experienceContainer = document.getElementById('experience-toggle-container');
     if (!toggleBtn || !experienceContainer) return;
     toggleBtn.addEventListener('click', () => {
         const isCompressed = experienceContainer.classList.toggle('compressed-mode');
@@ -571,9 +571,12 @@ function collectAtsLines(root) {
     return lines;
 }
 
-function paintAtsResume(doc, root) {
-    const scale = 72 / 96;
+function paintAtsResume(doc, root, place) {
+    const scaleX = place.scaleX;
+    const scaleY = place.scaleY;
     const origin = root.getBoundingClientRect();
+    const mapX = (left) => place.offsetX + (left - origin.left) * scaleX;
+    const mapY = (top) => place.offsetY + (top - origin.top) * scaleY;
     const boxes = [];
     root.querySelectorAll('*').forEach(el => {
         if (el.closest('.toggle-btn, #experience-toggle-header')) return;
@@ -591,10 +594,10 @@ function paintAtsResume(doc, root) {
             fill = cssRgb(style.backgroundColor);
         }
         const box = {
-            x: (rect.left - origin.left) * scale,
-            y: (rect.top - origin.top) * scale,
-            w: rect.width * scale,
-            h: rect.height * scale
+            x: mapX(rect.left),
+            y: mapY(rect.top),
+            w: rect.width * scaleX,
+            h: rect.height * scaleY
         };
         if (gradient) {
             boxes.push({ kind: 'gradient', ...box, stops: gradient });
@@ -606,10 +609,10 @@ function paintAtsResume(doc, root) {
         if (border >= 1 && borderColor && el.matches('.job-item, .education-item, .profile')) {
             boxes.push({
                 kind: 'fill',
-                x: (rect.left - origin.left) * scale,
-                y: (rect.top - origin.top) * scale,
-                w: Math.max(border, 2) * scale,
-                h: rect.height * scale,
+                x: mapX(rect.left),
+                y: mapY(rect.top),
+                w: Math.max(border, 2) * scaleX,
+                h: rect.height * scaleY,
                 fill: borderColor
             });
         }
@@ -640,16 +643,16 @@ function paintAtsResume(doc, root) {
             : (weight >= 600 ? 'bold' : 'normal');
         doc.setFont('helvetica', styleName);
         doc.setTextColor(line.color[0], line.color[1], line.color[2]);
-        let size = line.fontSize * scale;
+        let size = line.fontSize * scaleY;
         doc.setFontSize(size);
         const textWidth = doc.getTextWidth(line.text);
-        const maxWidth = Math.max(line.w * scale, 1);
+        const maxWidth = Math.max(line.w * scaleX, 1);
         if (textWidth > maxWidth) {
             size *= maxWidth / textWidth;
             doc.setFontSize(size);
         }
-        const x = (line.x - origin.left) * scale;
-        const y = (line.y - origin.top + line.h * 0.8) * scale;
+        const x = mapX(line.x);
+        const y = mapY(line.y) + line.h * 0.8 * scaleY;
         doc.text(line.text, x, y);
     });
 
@@ -663,10 +666,10 @@ function paintAtsResume(doc, root) {
         doc.addImage(
             emojiDataUrl(text),
             'PNG',
-            (rect.left - origin.left) * scale,
-            (rect.top - origin.top) * scale,
-            rect.width * scale,
-            rect.height * scale
+            mapX(rect.left),
+            mapY(rect.top),
+            rect.width * scaleX,
+            rect.height * scaleY
         );
     });
 }
@@ -675,17 +678,28 @@ function buildAtsResumePdf() {
     const { jsPDF } = window.jspdf;
     const root = document.querySelector('.content-wrapper');
     const rect = root.getBoundingClientRect();
-    const scale = 72 / 96;
+    const pageW = 612;
+    const pageH = 792;
+    const natural = 72 / 96;
+    const fit = Math.min(pageW / (rect.width * natural), pageH / (rect.height * natural));
+    const scale = natural * fit;
+    const drawnW = rect.width * scale;
+    const drawnH = rect.height * scale;
     const doc = new jsPDF({
         unit: 'pt',
-        format: [rect.width * scale, rect.height * scale],
+        format: 'letter',
         compress: true
     });
     doc.setProperties({
         title: 'Kevin Campos Gonzalez - Resume',
         author: 'Kevin Campos Gonzalez'
     });
-    paintAtsResume(doc, root);
+    paintAtsResume(doc, root, {
+        scaleX: scale,
+        scaleY: scale,
+        offsetX: (pageW - drawnW) / 2,
+        offsetY: (pageH - drawnH) / 2
+    });
     return doc;
 }
 
