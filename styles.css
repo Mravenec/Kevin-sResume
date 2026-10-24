@@ -151,6 +151,12 @@ h2 {
     font-size: 0.7rem;
 }
 
+.icon svg {
+    width: 11px;
+    height: 11px;
+    display: block;
+}
+
 .contact-item a {
     color: var(--primary-color);
     text-decoration: none;

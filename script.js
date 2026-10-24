@@ -301,7 +301,9 @@ const resumeIdentity = {
     name: 'KEVIN CAMPOS GONZÁLEZ',
     phone: '(+506) 6150-9057',
     email: 'kcamposgo90@gmail.com',
-    location: 'Santa Barbara, Heredia'
+    location: 'Santa Barbara, Heredia',
+    github: 'https://github.com/mravenec/',
+    gitlab: 'https://gitlab.com/kcamposgo90'
 };
 const languageLevels = [85, 40, 100];
 const collapsedJobStart = 3;
@@ -363,16 +365,35 @@ function switchLanguage(lang) {
     const contact = resumeNode('section', 'contact');
     contact.append(resumeNode('h2', '', t.contact));
     [
-        ['📞', resumeIdentity.phone],
-        ['✉️', resumeIdentity.email, resumeIdentity.email],
-        ['📍', resumeIdentity.location]
-    ].forEach(([icon, value, mailto]) => {
+        { icon: '📞', value: resumeIdentity.phone },
+        { icon: '✉️', value: resumeIdentity.email, href: `mailto:${resumeIdentity.email}` },
+        { icon: '📍', value: resumeIdentity.location },
+        {
+            iconSvg: '<svg fill="#24292f" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
+            value: 'github.com/mravenec',
+            href: resumeIdentity.github
+        },
+        {
+            iconSvg: '<svg fill="#FC6D26" viewBox="0 0 24 24" aria-hidden="true"><path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg>',
+            value: 'gitlab.com/kcamposgo90',
+            href: resumeIdentity.gitlab
+        }
+    ].forEach(({ icon, iconSvg, value, href }) => {
         const item = resumeNode('div', 'contact-item');
-        item.append(resumeNode('span', 'icon', icon));
-        item.append(document.createTextNode(' '));
-        if (mailto) {
+        if (icon || iconSvg) {
+            const mark = resumeNode('span', 'icon');
+            if (iconSvg) mark.innerHTML = iconSvg;
+            else mark.textContent = icon;
+            item.append(mark);
+            item.append(document.createTextNode(' '));
+        }
+        if (href) {
             const link = resumeNode('a', '', value);
-            link.href = `mailto:${mailto}`;
+            link.href = href;
+            if (!href.startsWith('mailto:')) {
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+            }
             item.append(link);
         } else {
             item.append(document.createTextNode(value));
@@ -483,6 +504,26 @@ function atsPlain(value) {
         .replace(/[^\x0A\x0D\x20-\xFF]/g, '')
         .replace(/[ \t]+/g, ' ')
         .trim();
+}
+
+function svgIconDataUrl(svg) {
+    const px = 128;
+    const canvas = document.createElement('canvas');
+    canvas.width = px;
+    canvas.height = px;
+    const ctx = canvas.getContext('2d');
+    const box = svg.viewBox.baseVal;
+    const w = box && box.width ? box.width : 24;
+    const h = box && box.height ? box.height : 24;
+    ctx.scale(px / w, px / h);
+    const fallback = svg.getAttribute('fill') || '#24292f';
+    svg.querySelectorAll('path').forEach(path => {
+        const d = path.getAttribute('d');
+        if (!d) return;
+        ctx.fillStyle = path.getAttribute('fill') || fallback;
+        ctx.fill(new Path2D(d));
+    });
+    return canvas.toDataURL('image/png');
 }
 
 function emojiDataUrl(char) {
@@ -659,18 +700,27 @@ function paintAtsResume(doc, root, place) {
     root.querySelectorAll('.icon').forEach(el => {
         const style = getComputedStyle(el);
         if (style.display === 'none' || style.visibility === 'hidden') return;
+        const svg = el.querySelector('svg');
         const text = el.textContent.trim();
-        if (!text) return;
+        if (!svg && !text) return;
         const rect = el.getBoundingClientRect();
         if (rect.width < 1 || rect.height < 1) return;
         doc.addImage(
-            emojiDataUrl(text),
+            svg ? svgIconDataUrl(svg) : emojiDataUrl(text),
             'PNG',
             mapX(rect.left),
             mapY(rect.top),
             rect.width * scaleX,
             rect.height * scaleY
         );
+    });
+
+    root.querySelectorAll('a[href]').forEach(el => {
+        const href = el.href;
+        if (!href) return;
+        const rect = el.getBoundingClientRect();
+        if (rect.width < 1 || rect.height < 1) return;
+        doc.link(mapX(rect.left), mapY(rect.top), rect.width * scaleX, rect.height * scaleY, { url: href });
     });
 }
 
