@@ -299,7 +299,7 @@ const translations = {
 // Current language state
 const resumeIdentity = {
     name: 'KEVIN CAMPOS GONZÁLEZ',
-    phone: '6150-9057',
+    phone: '(+506) 6150-9057',
     email: 'kcamposgo90@gmail.com',
     location: 'Santa Barbara, Heredia'
 };
