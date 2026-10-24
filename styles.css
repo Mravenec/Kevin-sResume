@@ -485,7 +485,45 @@ h2 {
 }
 
 /* Hide toggle during PDF/Print export */
+@page {
+    size: 750px 1480px;
+    margin: 0;
+}
+
 @media print {
+    body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    #top-controls {
+        display: none !important;
+    }
+
+    .content-wrapper {
+        box-shadow: none !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+        padding: 12px !important;
+        border-radius: 0 !important;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr 2fr !important;
+        gap: 12px !important;
+    }
+
+    .languages-horizontal {
+        flex-direction: row !important;
+    }
+
+    .header h1 {
+        color: #ffffff !important;
+        background: #2563eb !important;
+    }
+
     .toggle-header, .toggle-btn, .no-export {
         display: none !important;
     }
@@ -510,7 +548,7 @@ h2 {
         border-left-color: #2563eb !important; /* Force Blue for summary */
     }
 
-    header h1, h2 {
+    h2 {
         color: #2563eb !important;
     }
 
@@ -519,12 +557,6 @@ h2 {
         color: white !important;
     }
 
-    .profile p {
-        text-align: left !important; /* Critical fix: Justification causes .NET overlap in PDF engines */
-        letter-spacing: 0.4px !important;
-        word-spacing: 1px !important;
-    }
-    
     /* Ensure the visible group takes full space */
     #original-jobs-group, #summary-job-group {
         width: 100% !important;
