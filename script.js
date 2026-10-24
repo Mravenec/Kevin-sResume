@@ -297,131 +297,44 @@ const translations = {
 };
 
 // Current language state
+const resumeIdentity = {
+    name: 'KEVIN CAMPOS GONZÁLEZ',
+    phone: '6150-9057',
+    email: 'kcamposgo90@gmail.com',
+    location: 'Santa Barbara, Heredia'
+};
+const languageLevels = [85, 40, 100];
+const collapsedJobStart = 3;
 let currentLanguage = 'en';
 
-// Function to switch language
-function switchLanguage(lang) {
-    currentLanguage = lang;
-    const t = translations[lang];
-    
-    // Update download buttons
-    document.getElementById('downloadBtn').textContent = t.downloadBtn;
-    document.getElementById('downloadTxtBtn').textContent = t.downloadTxtBtn;
-    
-    // Update subtitle
-    document.querySelector('.subtitle').textContent = t.subtitle;
-    
-    // Update section headers
-    document.querySelector('section.contact h2').textContent = t.contact;
-    document.querySelector('section.education h2').textContent = t.education;
-    document.querySelector('section.skills h2').textContent = t.technicalSkills;
-    document.querySelector('section.experience h2').textContent = t.workExperience;
-    document.querySelector('section.ai-experience h2').textContent = t.generativeAI;
-    document.querySelector('section.languages h2').textContent = t.languages;
-    
-    // Update profile
-    const profileParagraphs = document.querySelectorAll('.profile p');
-    t.profile.forEach((text, index) => {
-        if (profileParagraphs[index]) {
-            profileParagraphs[index].textContent = text;
-        }
-    });
-    
-    // Update AI description
-    const aiParagraphs = document.querySelectorAll('.ai-description');
-    if (Array.isArray(t.aiDescription)) {
-        t.aiDescription.forEach((text, index) => {
-            if (aiParagraphs[index]) {
-                aiParagraphs[index].textContent = text;
-            }
-        });
-    } else {
-        // Fallback for single paragraph
-        if (aiParagraphs[0]) {
-            aiParagraphs[0].textContent = t.aiDescription;
-        }
-    }
-    
-    // Update education items
-    const educationItems = document.querySelectorAll('.education-item');
-    t.educationItems.forEach((item, index) => {
-        if (educationItems[index]) {
-            educationItems[index].querySelector('.education-year').textContent = item.year;
-            educationItems[index].querySelector('.education-title').textContent = item.title;
-            educationItems[index].querySelector('.education-school').textContent = item.school;
-        }
-    });
-    
-    // Update job items
-    const jobItems = document.querySelectorAll('.job-item');
-    t.jobItems.forEach((job, jobIndex) => {
-        if (jobItems[jobIndex]) {
-            jobItems[jobIndex].querySelector('.job-year').textContent = job.year;
-            jobItems[jobIndex].querySelector('.job-title').textContent = job.title;
-            jobItems[jobIndex].querySelector('.job-company').textContent = job.company;
-            const descriptions = jobItems[jobIndex].querySelectorAll('.job-description');
-            job.descriptions.forEach((desc, descIndex) => {
-                if (descriptions[descIndex]) {
-                    descriptions[descIndex].textContent = desc;
-                }
-            });
-        }
-    });
-
-    // Update summary job item
-    const summaryItem = document.querySelector('.summary-item');
-    if (summaryItem && t.summaryJob) {
-        summaryItem.querySelector('.job-year').textContent = t.summaryJob.year;
-        summaryItem.querySelector('.job-title').textContent = t.summaryJob.title;
-        summaryItem.querySelector('.job-company').textContent = t.summaryJob.company;
-        const summaryDescriptions = summaryItem.querySelectorAll('.job-description');
-        t.summaryJob.descriptions.forEach((desc, index) => {
-            if (summaryDescriptions[index]) {
-                summaryDescriptions[index].textContent = desc;
-            }
-        });
-    }
-    
-    // Update skill categories
-    const skillCategories = document.querySelectorAll('.skill-category');
-    t.skillCategories.forEach((category, index) => {
-        if (skillCategories[index]) {
-            skillCategories[index].querySelector('.skills-subheader').textContent = category.header;
-            skillCategories[index].querySelector('.skills-list').textContent = category.list;
-        }
-    });
-    
-    // Update language names
-    const languageBlocks = document.querySelectorAll('.language-block');
-    t.languageNames.forEach((name, index) => {
-        if (languageBlocks[index]) {
-            languageBlocks[index].querySelector('.language-name').textContent = name;
-        }
-    });
-    
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.getElementById(`lang-${lang}`).classList.add('active');
-    
-    // Update HTML lang attribute
-    document.documentElement.lang = lang;
+function resumeNode(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
 }
 
-document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
-document.getElementById('lang-es').addEventListener('click', () => switchLanguage('es'));
+function jobArticle(job, extraClass) {
+    const article = resumeNode('article', extraClass ? `job-item ${extraClass}` : 'job-item');
+    article.append(
+        resumeNode('div', 'job-year', job.year),
+        resumeNode('h3', 'job-title', job.title),
+        resumeNode('p', 'job-company', job.company)
+    );
+    job.descriptions.forEach((desc, index) => {
+        if (index > 0) article.append(resumeNode('div', 'job-description-spacer'));
+        article.append(resumeNode('p', 'job-description', desc));
+    });
+    return article;
+}
 
-// Toggle Summary Logic
-const toggleBtn = document.getElementById('experience-toggle-header');
-const experienceContainer = document.getElementById('experience-toggle-container');
-
-if (toggleBtn && experienceContainer) {
+function bindExperienceToggle() {
+    const toggleBtn = document.getElementById('experience-toggle-header');
+    const experienceContainer = document.getElementById('experience-toggle-container');
+    if (!toggleBtn || !experienceContainer) return;
     toggleBtn.addEventListener('click', () => {
         const isCompressed = experienceContainer.classList.toggle('compressed-mode');
         const icon = toggleBtn.querySelector('.toggle-icon');
-        
-        // Update Icon and Toggle Visibility
         if (isCompressed) {
             icon.textContent = '▶';
             toggleBtn.classList.add('collapsed');
@@ -435,6 +348,131 @@ if (toggleBtn && experienceContainer) {
         }
     });
 }
+
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    const t = translations[lang];
+    const root = document.querySelector('.content-wrapper');
+
+    const header = resumeNode('header', 'header');
+    header.append(resumeNode('h1', '', resumeIdentity.name), resumeNode('p', 'subtitle', t.subtitle));
+
+    const profile = resumeNode('section', 'profile');
+    t.profile.forEach(text => profile.append(resumeNode('p', '', text)));
+
+    const contact = resumeNode('section', 'contact');
+    contact.append(resumeNode('h2', '', t.contact));
+    [
+        ['📞', resumeIdentity.phone],
+        ['✉️', resumeIdentity.email, resumeIdentity.email],
+        ['📍', resumeIdentity.location]
+    ].forEach(([icon, value, mailto]) => {
+        const item = resumeNode('div', 'contact-item');
+        item.append(resumeNode('span', 'icon', icon));
+        item.append(document.createTextNode(' '));
+        if (mailto) {
+            const link = resumeNode('a', '', value);
+            link.href = `mailto:${mailto}`;
+            item.append(link);
+        } else {
+            item.append(document.createTextNode(value));
+        }
+        contact.append(item);
+    });
+
+    const education = resumeNode('section', 'education');
+    education.append(resumeNode('h2', '', t.education));
+    t.educationItems.forEach(item => {
+        const article = resumeNode('article', 'education-item');
+        article.append(
+            resumeNode('div', 'education-year', item.year),
+            resumeNode('h3', 'education-title', item.title),
+            resumeNode('p', 'education-school', item.school)
+        );
+        education.append(article);
+    });
+
+    const skills = resumeNode('section', 'skills');
+    skills.append(resumeNode('h2', '', t.technicalSkills));
+    const skillsSection = resumeNode('div', 'skills-section');
+    t.skillCategories.forEach(category => {
+        const block = resumeNode('div', 'skill-category');
+        block.append(
+            resumeNode('h3', 'skills-subheader', category.header),
+            resumeNode('p', 'skills-list', category.list)
+        );
+        skillsSection.append(block);
+    });
+    skills.append(skillsSection);
+
+    const left = resumeNode('aside', 'left-column');
+    left.append(contact, education, skills);
+
+    const experience = resumeNode('section', 'experience');
+    experience.append(resumeNode('h2', '', t.workExperience));
+    t.jobItems.slice(0, collapsedJobStart).forEach(job => experience.append(jobArticle(job)));
+
+    const toggle = resumeNode('div', 'compressed-mode');
+    toggle.id = 'experience-toggle-container';
+    const toggleBtn = resumeNode('button', 'toggle-btn collapsed');
+    toggleBtn.id = 'experience-toggle-header';
+    toggleBtn.type = 'button';
+    toggleBtn.append(resumeNode('span', 'toggle-icon', '▶'));
+    const original = resumeNode('div', '');
+    original.id = 'original-jobs-group';
+    original.style.display = 'none';
+    t.jobItems.slice(collapsedJobStart).forEach(job => original.append(jobArticle(job)));
+    const summaryGroup = resumeNode('div', '');
+    summaryGroup.id = 'summary-job-group';
+    summaryGroup.append(jobArticle(t.summaryJob, 'summary-item'));
+    toggle.append(toggleBtn, original, summaryGroup);
+    experience.append(toggle);
+
+    const right = resumeNode('section', 'right-column');
+    right.append(experience);
+
+    const mainContent = resumeNode('div', 'main-content');
+    mainContent.append(left, right);
+
+    const ai = resumeNode('section', 'ai-experience');
+    ai.append(resumeNode('h2', '', t.generativeAI));
+    t.aiDescription.forEach(text => ai.append(resumeNode('p', 'ai-description', text)));
+
+    const languages = resumeNode('section', 'languages');
+    languages.append(resumeNode('h2', '', t.languages));
+    const row = resumeNode('div', 'languages-horizontal');
+    t.languageNames.forEach((name, index) => {
+        const block = resumeNode('div', 'language-block');
+        const track = resumeNode('div', 'language-bar-container');
+        const bar = resumeNode('div', 'language-bar');
+        bar.style.width = `${languageLevels[index] || 0}%`;
+        track.append(bar);
+        block.append(track, resumeNode('div', 'language-name', name));
+        row.append(block);
+    });
+    languages.append(row);
+
+    root.replaceChildren(
+        header,
+        profile,
+        resumeNode('div', 'separator'),
+        mainContent,
+        ai,
+        languages,
+        resumeNode('div', 'separator')
+    );
+
+    document.getElementById('downloadBtn').textContent = t.downloadBtn;
+    document.getElementById('downloadTxtBtn').textContent = t.downloadTxtBtn;
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(`lang-${lang}`).classList.add('active');
+    document.documentElement.lang = lang;
+    bindExperienceToggle();
+}
+
+document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
+document.getElementById('lang-es').addEventListener('click', () => switchLanguage('es'));
+switchLanguage('en');
 
 function atsPlain(value) {
     return String(value)
