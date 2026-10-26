@@ -9,28 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2026letter">
 </head>
 <body>
-    <!-- Language selector and download buttons in top left corner -->
-    <div id="top-controls">
-        <div id="language-selector">
-            <button id="lang-en" class="lang-btn active" title="Flag of the United States">
-                <span class="flag">🇺🇸</span>
-            </button>
-            <button id="lang-es" class="lang-btn" title="Flag of Spain">
-                <span class="flag">🇪🇸</span>
-            </button>
-        </div>
-        <div id="download-container">
-            <button id="downloadBtn" type="button"></button>
-            <button id="downloadTxtBtn" type="button"></button>
-        </div>
-    </div>
-
-    <main class="content-wrapper"></main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="script.js?v=2026titles"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
