@@ -30,7 +30,7 @@ const translations = {
         jobItems: [
             {
                 year: '2026 - Present',
-                title: 'Freelance Drupal Full-Stack Developer',
+                title: 'Drupal Full-Stack Developer',
                 company: 'KEBOCA',
                 descriptions: [
                     'I develop and maintain sites on Drupal 11 with PHP, Composer, Drush, and DDEV. I build custom modules and themes, with Twig and Sass, and the site configuration.',
@@ -43,7 +43,7 @@ const translations = {
             },
             {
                 year: '2023 - Present',
-                title: 'Freelance Full-Stack Developer',
+                title: 'Java Full-Stack Developer',
                 company: 'Rodieja S.A.',
                 descriptions: [
                     'Architected and implemented scalable back-end solutions using Spring Boot (Java) and React JS, developing RESTful APIs following MVC architecture and SOLID principles for high-performance enterprise applications.',
@@ -177,7 +177,7 @@ const translations = {
         jobItems: [
             {
                 year: '2026 - Presente',
-                title: 'Desarrollador Full-Stack Freelance de Drupal',
+                title: 'Desarrollador Full-Stack de Drupal',
                 company: 'KEBOCA',
                 descriptions: [
                     'Desarrollo y mantengo sitios en Drupal 11 con PHP, Composer, Drush y DDEV. Construyo módulos y temas propios, con Twig y Sass, y la configuración del sitio.',
@@ -190,7 +190,7 @@ const translations = {
             },
             {
                 year: '2023 - Presente',
-                title: 'Desarrollador Full-Stack Freelance',
+                title: 'Desarrollador Full-Stack de Java',
                 company: 'Rodieja S.A.',
                 descriptions: [
                     'Arquitecté e implementé soluciones back-end escalables utilizando Spring Boot (Java) y React JS, desarrollando APIs RESTful bajo arquitectura MVC y principios SOLID para aplicaciones empresariales de alto rendimiento.',
